@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView, View
+from django.shortcuts import render, redirect
+from django.views.generic import View
 from .forms import SearchForm
+from .utils.CallAPI import getData
 
 # Create your views here.
 
@@ -37,16 +38,23 @@ class HomeView(View):
 
     def get(self, request):
         form = SearchForm()
-        return render(request, self.template_name, {'form': form})
+        if form.is_valid():
+
+            return redirect(CategoryViewer)
+
+        context = {'form': form}
+        return render(request, self.template_name, context)
 
 
-class MashUpView(View):
-    template_name = 'mashup.html'
+class CategoryViewer(View):
+    template_name = 'viewer.html'
 
     def post(self, request):
-        print(request.POST)
-        #if form.isa_valid:
-        return render(request, self.template_name)
+        q = request.POST
+        search_query = q['search']
+        data = getData(search_query)
+        context = {'wikidata': data}
+        return render(request, self.template_name, context)
 
     def get(self, request):
-        return render(request,self.template_name)
+        return render(request, self.template_name)

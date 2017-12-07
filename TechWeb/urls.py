@@ -16,11 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from RAVE.views import HomeView, MashUpView
+from RAVE.views import HomeView, CategoryViewer
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/$', HomeView.as_view()),
-    url(r'^view/$', MashUpView.as_view()),
+    url(r'^view/$', CategoryViewer.as_view()),
 
 ]
