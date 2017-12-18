@@ -12,4 +12,4 @@ The standard project is the Annotator, which allows you to add comments and anno
 
 ## Enhancer
 
-The advanced project is the Enhancer, which integrates multiple external sources and creates complex visualizations, intelligently mixing information that is coherent with each other.
+The advanced project is the Enhancer, which integrates multiple external sources (e.g. API's) and creates complex visualizations, intelligently mixing information that is coherent with each other.
