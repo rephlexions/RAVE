@@ -46,7 +46,7 @@ class CategoryViewer(View):
         q = request.POST
         search_query = q['search']
         data = get_wiki_page(search_query)
-        context = {'wikidata': data, "form": form}
+        context = {'wiki_data': data, "form": form}
 
         return render(request, self.template_name, context)
 

@@ -22,14 +22,14 @@ def get_wiki_page(param):
 
         data = r.json()
         # accessing the html code
-        wikihtml = data['parse']['text']['*']
+        wiki_html = data['parse']['text']['*']
 
         # prettify the html data. Optional.
         # TODO https://stackoverflow.com/questions/15059206/how-should-i-populate-json-data-in-a-django-template
         # TODO https://duckduckgo.com/?q=jquery+append+html+to+div+json&t=ffab&ia=qa
-        soup = BeautifulSoup(wikihtml, "html5lib")
-        prettysoup = soup.div.prettify(formatter="html",encoding="utf-8")
-        return prettysoup
+        soup = BeautifulSoup(wiki_html, "html5lib")
+        pretty_soup = soup.div.prettify(formatter="html",encoding="utf-8")
+        return pretty_soup
 
 """
     soup = BeautifulSoup(wikihtml, "html5lib")
