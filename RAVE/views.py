@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.views.generic import View
 from .forms import SearchForm
 from .utils.CallAPI import get_wiki_page, get_results
@@ -51,4 +51,13 @@ class CategoryViewer(View):
         return render(request, self.template_name, context)
 
     def get(self, request):
-        return redirect("/home/")
+        print(request.GET)
+        return render(request, self.template_name,)
+
+
+def validate_query(request):
+    q = request.POST
+    search_query = q['search']
+    data = get_wiki_page(search_query)
+
+    return HttpResponse(data)

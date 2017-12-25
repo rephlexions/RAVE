@@ -4,6 +4,9 @@
 
     {% include "form.html" %}
 
-    <p>{{ results }}</p>
+    {% for foo in results %}
+    <ul><li><a href="/view/" class="search-result">{{ foo }}</a></li></ul>
+    {% endfor %}
+
 
 {% endblock content %}
