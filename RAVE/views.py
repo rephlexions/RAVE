@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, HttpResponse
+from django.http import JsonResponse
 from django.views.generic import View
 from .forms import SearchForm
-from .utils.CallAPI import get_wiki_page, get_results
+from .utils.CallAPI import get_wiki_page, get_results, get_wiki_page_two
 
 # Create your views here.
 
@@ -33,9 +34,10 @@ class SearchView(View):
         data = get_results(search_query)
         context = {'results': data, 'form': form}
         return render(request, self.template_name, context)
-
+"""
     def get(self, request):
         return redirect("/home/")
+"""
 
 
 class CategoryViewer(View):
@@ -56,8 +58,8 @@ class CategoryViewer(View):
 
 
 def validate_query(request):
-    q = request.POST
-    search_query = q['search']
-    data = get_wiki_page(search_query)
+    if request.method == "GET":
+        page = request.GET['page']
+        data = get_wiki_page_two(page)
 
-    return HttpResponse(data)
+        return JsonResponse(data, safe=False)

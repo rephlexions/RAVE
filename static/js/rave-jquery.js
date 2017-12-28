@@ -1,5 +1,25 @@
-$(".search-result").click(function () {
-    console.log($(this).text())
+$("document").ready(function () {
+
+    $(".search-result").click(function (e) {
+        e.preventDefault();
+        console.log($(this).text());
+        var page = $(this).text();
+        $.ajax({
+            url: "/ajax/test/",
+            method: "GET",
+            data: {"page": page},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                $("#wiki-data").html(data);
+            },
+            error: function() {
+                $('#notification-bar').text('An error occurred');
+            }
+        })
+    });
+
+
 });
 
 /*
