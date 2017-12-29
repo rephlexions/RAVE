@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.views.generic import View
 from .forms import SearchForm
-from .utils.CallAPI import get_wiki_page, get_results, get_wiki_page_two
+from .utils.CallAPI import get_wiki_page, get_results
 
 # Create your views here.
 
@@ -48,7 +48,7 @@ class CategoryViewer(View):
         q = request.POST
         search_query = q['search']
         data = get_wiki_page(search_query)
-        context = {'wiki_data': data, "form": form}
+        context = {'wiki_data': data, 'form': form}
 
         return render(request, self.template_name, context)
 
@@ -57,9 +57,9 @@ class CategoryViewer(View):
         return render(request, self.template_name,)
 
 
-def validate_query(request):
-    if request.method == "GET":
+def get_data(request):
+    if request.method == 'GET':
         page = request.GET['page']
-        data = get_wiki_page_two(page)
+        data = get_wiki_page(page)
 
         return JsonResponse(data, safe=False)

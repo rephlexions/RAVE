@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset = "UTF-8">
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    {% load staticfiles %}
+      <link type="text/css" rel="stylesheet" href="{% static "css/materialize.min.css" %}"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>RAVE</title>
 </head>
 <body>
-    <h1>R.A.V.E.</h1>
-    <div id="container">
-        {% block content %}
+{% block content %}
 
-        {% endblock content %}
-    </div>
-
+{% endblock content %}
 </body>
 {% load staticfiles %}
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-</script>
-<script src="{% static "js/rave-jquery.js" %}"></script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="{% static "js/rave-jquery.js" %}"></script>
+    <script src="{% static "js/materialize.min.js" %}"></script>
 </html>
