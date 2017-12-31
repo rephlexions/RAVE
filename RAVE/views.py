@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.views.generic import View
 from .forms import SearchForm
-from .utils.CallAPI import get_wiki_page, get_results
+from .utils.api_utils import get_wiki_page, get_search_results
 
 # Create your views here.
 
@@ -25,13 +25,13 @@ class HomeView(View):
 
 
 class SearchView(View):
-    template_name = 'results.html'
+    template_name = 'search.html'
 
     def post(self, request):
         form = SearchForm()
         q = request.POST
         search_query = q['search']
-        data = get_results(search_query)
+        data = get_search_results(search_query)
         context = {'results': data, 'form': form}
         return render(request, self.template_name, context)
 """
@@ -53,8 +53,12 @@ class CategoryViewer(View):
         return render(request, self.template_name, context)
 
     def get(self, request):
-        print(request.GET)
-        return render(request, self.template_name,)
+        form = SearchForm()
+        page = request.POST['page']
+        data = get_wiki_page(page)
+        context = {'wiki_data': data, 'form': form}
+
+        return render(request, self.template_name, context)
 
 
 def get_data(request):

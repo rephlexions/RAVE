@@ -4,7 +4,7 @@ $("document").ready(function () {
         console.log($(this).text());
         var page = $(this).text();
         $.ajax({
-            url: "/ajax/data/",
+            url: "/ajax/data",
             method: "GET",
             data: {"page": page},
             dataType: "json",
@@ -17,8 +17,6 @@ $("document").ready(function () {
             }
         })
     });
-
-
 });
 
 /*

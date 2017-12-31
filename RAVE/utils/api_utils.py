@@ -1,8 +1,7 @@
 import requests
-from bs4 import BeautifulSoup
 
 
-def get_results(param):
+def get_search_results(param):
     payload = {'search': param}
     r = requests.get("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&namespace=0%7C14&limit=10",
                      params=payload)

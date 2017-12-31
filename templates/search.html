@@ -1,15 +1,14 @@
-{% extends "base.html" %}
-{%  block content %}
-    <h3>Search Results</h3>
-
+{% extends "base.html" %} {%  block content %}
+    <div class="">
     {% include "form.html" %}
-
+    <h3>Search Results</h3>
     {% for foo in results %}
     <ul><li><a href="" class="search-result">{{ foo }}</a></li></ul>
         <div id="wiki-data">
 
         </div>
     {% endfor %}
+    </div>
 
 
 {% endblock content %}
