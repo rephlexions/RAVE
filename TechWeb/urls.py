@@ -26,3 +26,4 @@ urlpatterns = [
     url(r'^ajax/data/$', get_data),
 
 ]
+#     url(r'^view/(?P<page>\[a-z,A-Z,0-9_.-]*)/$', CategoryViewer.as_view(), name='view'),

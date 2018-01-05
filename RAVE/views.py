@@ -18,26 +18,20 @@ class HomeView(View):
         context = {'form': form}
         return render(request, self.template_name, context)
 
-    def post(self, request):
-        form = SearchForm()
-        context = {'form': form}
-        return render(request, self.template_name, context)
+    def post(self):
+        return redirect(HomeView)
 
 
 class SearchView(View):
-    template_name = 'search.html'
+    template_name = 'results.html'
 
-    def post(self, request):
+    def get(self, request):
         form = SearchForm()
-        q = request.POST
-        search_query = q['search']
+        search_query = request.GET['search']
         data = get_search_results(search_query)
         context = {'results': data, 'form': form}
+
         return render(request, self.template_name, context)
-"""
-    def get(self, request):
-        return redirect("/home/")
-"""
 
 
 class CategoryViewer(View):
@@ -54,7 +48,8 @@ class CategoryViewer(View):
 
     def get(self, request):
         form = SearchForm()
-        page = request.POST['page']
+        print(request.GET.get('page'))
+        page = request.GET.get('page')
         data = get_wiki_page(page)
         context = {'wiki_data': data, 'form': form}
 
