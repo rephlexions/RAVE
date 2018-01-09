@@ -25,6 +25,7 @@ class HomeView(View):
 class SearchView(View):
     template_name = 'results.html'
 
+    # TODO Rework this function
     def get(self, request):
         form = SearchForm()
         search_query = request.GET['search']
@@ -37,7 +38,7 @@ class SearchView(View):
 class CategoryViewer(View):
     template_name = 'viewer.html'
 
-# TODO Rework this function
+    # TODO Rework this function
     def get(self, request):
         form = SearchForm()
         query = request.GET.get('page')
