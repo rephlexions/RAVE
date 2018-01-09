@@ -5,8 +5,10 @@
 <title>Category Viewer</title>
 <h1>Category Viewer</h1>
 {% include "form.html" %}
-    <div class="wiki_data">
-        {{ wikidata }}
+    <div class="wiki-data">
+        {% for foo in wiki_data %}
+            {{ foo|safe }}
+        {% endfor %}
     </div>
 
 

@@ -29,28 +29,20 @@ class SearchView(View):
         form = SearchForm()
         search_query = request.GET['search']
         data = get_search_results(search_query)
-        context = {'results': data, 'form': form}
-
+        context = {'form': form}
+        #'results': data,
         return render(request, self.template_name, context)
 
 
 class CategoryViewer(View):
     template_name = 'viewer.html'
 
-    def post(self, request):
-        form = SearchForm()
-        q = request.POST
-        search_query = q['search']
-        data = get_wiki_page(search_query)
-        context = {'wiki_data': data, 'form': form}
-
-        return render(request, self.template_name, context)
-
+# TODO Rework this function
     def get(self, request):
         form = SearchForm()
-        print(request.GET.get('page'))
-        page = request.GET.get('page')
-        data = get_wiki_page(page)
+        query = request.GET.get('page')
+        data = get_wiki_page(query)
+
         context = {'wiki_data': data, 'form': form}
 
         return render(request, self.template_name, context)
@@ -62,3 +54,11 @@ def get_data(request):
         data = get_wiki_page(page)
 
         return JsonResponse(data, safe=False)
+
+
+def get_results(request):
+    if request.method == 'GET':
+        search_query = request.GET['search']
+        search_results = get_search_results(search_query)
+
+        return JsonResponse(search_results, safe=False)
