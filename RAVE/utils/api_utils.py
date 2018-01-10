@@ -3,8 +3,9 @@ import requests
 
 def get_search_results(param):
     payload = {'search': param}
-    r = requests.get("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&namespace=0%7C14&limit=10",
-                     params=payload)
+    r = requests.get("""https://en.wikipedia.org/w/api.php?action=opensearch&format=json
+    &namespace=0%7C14&limit=12""", params=payload)
+
     if r.status_code == 200:
         search_results = r.json()
         s = search_results[1]

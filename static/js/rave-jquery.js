@@ -14,7 +14,6 @@ $("document").ready(function () {
         }
     };
     var search_query = getUrlParameter('search');
-    console.log(search_query);
 
     $.ajax({
         url: "/ajax/search",
@@ -22,7 +21,10 @@ $("document").ready(function () {
         data: {"search": search_query},
         dataType: "json",
         success: function (data) {
-            console.log(data)
+            console.log(data);
+            $("span.card-title").each(function (i, obj) {
+               $(this).text(data[i])
+            });
         },
         error: function() {
             $('#notification-bar').text('An error occurred');

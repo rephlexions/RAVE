@@ -28,10 +28,10 @@ class SearchView(View):
     # TODO Rework this function
     def get(self, request):
         form = SearchForm()
-        search_query = request.GET['search']
-        data = get_search_results(search_query)
+        #search_query = request.GET['search']
+        #data = get_search_results(search_query)
         context = {'form': form}
-        #'results': data,
+
         return render(request, self.template_name, context)
 
 
