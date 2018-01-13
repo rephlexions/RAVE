@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.views.generic import View
 from .forms import SearchForm
 from .utils.api_utils import get_wiki_page, get_search_results
-
+import json
 # Create your views here.
 
 
@@ -28,9 +28,10 @@ class SearchView(View):
     # TODO Rework this function
     def get(self, request):
         form = SearchForm()
-        #search_query = request.GET['search']
-        #data = get_search_results(search_query)
-        context = {'form': form}
+        print(request.GET['search'])
+        search_query = request.GET['search']
+        data = get_search_results(search_query)
+        context = {'form': form, 'json_data': json.dumps(data)}
 
         return render(request, self.template_name, context)
 
@@ -59,7 +60,7 @@ def get_data(request):
 
 def get_results(request):
     if request.method == 'GET':
-        search_query = request.GET['search']
+        search_query = request.GET
         search_results = get_search_results(search_query)
 
         return JsonResponse(search_results, safe=False)

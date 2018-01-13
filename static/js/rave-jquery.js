@@ -14,6 +14,12 @@ $("document").ready(function () {
         }
     };
     var search_query = getUrlParameter('search');
+    var parsed_data = JSON.parse(jsondata);
+    console.log(parsed_data);
+
+
+});
+/*
 
     $.ajax({
         url: "/ajax/search",
@@ -23,15 +29,16 @@ $("document").ready(function () {
         success: function (data) {
 
             var parsed_data = JSON.parse(data);
-            /*
+            console.log(parsed_data[0]["images"])
+
             parsed_data[0] for Title and Intro text
             parsed_data[1] for images
-             */
+
             var str = JSON.stringify(parsed_data[1]);
             console.log(JSON.parse(str));
 
             //console.log(parsed_data[Object.keys(parsed_data)[2]]);
-            /*
+
             var titles = parsed_data[0][1];
             var intro_text = parsed_data[0][2];
             $("span.card-title").each(function (i, obj) {
@@ -39,17 +46,16 @@ $("document").ready(function () {
             });
             $("div.card-content").each(function (i, obj) {
                $(this).text(intro_text[i]);
-            });*/
+            })
 
         },
         error: function() {
             $('#notification-bar').text('An error occurred');
         }
         });
-
-});
-
+ */
 /*
+
 $("document").ready(function () {
         var vars = [], hash;
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
