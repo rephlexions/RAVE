@@ -15,7 +15,7 @@ def get_search_results(param):
         string_titles = '|'.join(titles_list)
         payload = {'titles': string_titles}
         images_req = requests.get(
-            "https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&pithumbsize=500",
+            "https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&pithumbsize=600&indexpageids=1",
             params=payload)
         images_results = images_req.json()
 
