@@ -1,10 +1,7 @@
 import requests
 import json
-from collections import defaultdict
-from django.http import JsonResponse
 
 
-# TODO Browser receives image links as Objects. Fix this
 def get_search_results(param):
     payload = {'search': param}
     search_req = requests.get("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&namespace=0%7C14&limit=12", params=payload)

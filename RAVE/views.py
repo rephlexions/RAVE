@@ -25,7 +25,6 @@ class HomeView(View):
 class SearchView(View):
     template_name = 'results.html'
 
-    # TODO Rework this function
     def get(self, request):
         form = SearchForm()
         print(request.GET['search'])

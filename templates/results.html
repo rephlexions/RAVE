@@ -1,12 +1,12 @@
 {% extends "base.html" %} {% load staticfiles %}  {%  block content %} {% include "form.html" %}
 
-    <h5>Search Results</h5>
+    <h2>Search Results</h2>
 
     <div class="row search-results ">
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -19,9 +19,9 @@
         </div>
 
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -34,9 +34,9 @@
         </div>
 
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -50,9 +50,9 @@
     </div>
     <div class="row search-results ">
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -65,9 +65,9 @@
         </div>
 
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -80,9 +80,9 @@
         </div>
 
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -96,9 +96,9 @@
     </div>
     <div class="row search-results ">
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -111,9 +111,9 @@
         </div>
 
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -126,9 +126,9 @@
         </div>
 
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -142,9 +142,9 @@
     </div>
     <div class="row search-results ">
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -157,9 +157,9 @@
         </div>
 
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -170,12 +170,11 @@
             </div>
           </div>
         </div>
-
 
         <div class="col s12 m6 l4">
-          <div class="card hoverable">
+          <div class="card hoverable medium">
             <div class="card-image">
-              <img src="">
+              <img src="{% static "images/wikipedia-Logo.jpg" %}">
               <span class="card-title"></span>
             </div>
             <div class="card-content">
@@ -186,7 +185,10 @@
             </div>
           </div>
         </div>
+    </div>
+    <div class="empty-results">
 
+    </div>
     <script type="text/javascript">
         var jsondata = {{ json_data| safe }};
 

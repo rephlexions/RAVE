@@ -14,27 +14,39 @@ $("document").ready(function () {
         }
     };
 
-    var search_query = getUrlParameter('search');
     var parsed_data = JSON.parse(jsondata);
-    console.log(parsed_data["text"][2]);
     var titles = parsed_data["text"][1];
+    console.log(parsed_data);
     var intro_text = parsed_data["text"][2];
-    $("span.card-title").each(function (i, obj) {
-       $(this).text(titles[i]);
-    });
-    $("div.card-content").each(function (i, obj) {
-       $(this).text(intro_text[i]);
-    });
-    $("div.card-action").children("a").each(function (i, obj) {
-       $(this).attr("href", "/view/" + titles[i]);
-    });
-
-
-    var page_ids = parsed_data['images']['query']['pageids'];
-    $("div.card-image").children("img").each(function (i, obj) {
-           $(this).attr("src", parsed_data['images']['query']['pages'][page_ids[i]]['thumbnail']['source']);
-
+    if(titles.length === 0){
+        var txt = $("<h5></h5>").text("Couldn't find anything :(");
+        $("div.empty-results").append(txt);
+    }
+    else{
+        $("div.search-results").slideDown("slow").show();
+        $("span.card-title").each(function (i, obj) {
+            $(this).text(titles[i]);
         });
+        $("div.card-content").children('p').each(function (i, obj) {
+           $(this).text(intro_text[i]);
+        });
+        $("div.card-action").children('a').each(function (i, obj) {
+           $(this).attr("href", "/view/?page=" + titles[i]);
+        });
+
+        var page_ids = parsed_data['images']['query']['pageids'];
+        $("div.card-image").children("img").each(function (i, obj) {
+            if(parsed_data['images']['query']['pages'][page_ids[i]].hasOwnProperty('thumbnail')){
+               $(this).attr("src", parsed_data['images']['query']['pages'][page_ids[i]]['thumbnail']['source']);
+               console.log(parsed_data['images']['query']['pages'][page_ids[i]]['thumbnail']['source']);
+            }
+            else{
+                i++;
+            }
+            });
+
+    }
+
 });
 
 /*

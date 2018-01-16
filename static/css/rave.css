@@ -1,3 +1,7 @@
+.search-results{
+    display: none;
+}
+
 /*
 .row.col{
     clear: both;
@@ -8,9 +12,9 @@
     left: auto;
     right: auto;
 }
-*/
 
-/*
+
+
 .card-content{
     text-align: center;
     width: 250px;
