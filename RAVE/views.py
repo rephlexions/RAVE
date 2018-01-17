@@ -27,7 +27,6 @@ class SearchView(View):
 
     def get(self, request):
         form = SearchForm()
-        print(request.GET['search'])
         search_query = request.GET['search']
         data = get_search_results(search_query)
         context = {'form': form, 'json_data': json.dumps(data)}
@@ -42,9 +41,10 @@ class CategoryViewer(View):
     def get(self, request):
         form = SearchForm()
         query = request.GET.get('page')
+        print(request.GET['page'])
         data = get_wiki_page(query)
 
-        context = {'wiki_data': data, 'form': form}
+        context = {'json_data': json.dumps(data), 'form': form}
 
         return render(request, self.template_name, context)
 

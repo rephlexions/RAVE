@@ -30,7 +30,7 @@ def get_wiki_page(param):
         # accessing the html code
         wiki_html = data['parse']['text']['*']
 
-        return wiki_html
+        return json.dumps(wiki_html)
 
 """
 URL to get the first image

@@ -1,15 +1,14 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load staticfiles %}
 
 {% block content %}
 
-<title>Category Viewer</title>
-<h1>Category Viewer</h1>
-{% include "form.html" %}
-    <div class="wiki-data">
-        {% for foo in wiki_data %}
-            {{ foo|safe }}
-        {% endfor %}
+    <h1>Category Viewer</h1>
+    {% include "form.html" %}
+    <div class="" id="wiki-data">
     </div>
-
+    <script type="text/javascript">
+        var json_page_data = {{ json_data| safe }};
+    </script>
+    <script type="text/javascript" src="{% static "js/viewer-jquery.js" %}"></script>
 
 {% endblock content %}

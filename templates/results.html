@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load staticfiles %}  {%  block content %} {% include "form.html" %}
+{% extends "base.html" %} {% load staticfiles %}
+{%  block content %}
+    {% include "form.html" %}
 
     <h2>Search Results</h2>
 
@@ -193,4 +195,6 @@
         var jsondata = {{ json_data| safe }};
 
     </script>
+    <script type="text/javascript" src="{% static "js/search-jquery.js" %}"></script>
+
 {% endblock content %}
