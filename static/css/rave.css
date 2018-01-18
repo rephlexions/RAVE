@@ -1,6 +1,9 @@
 .search-results{
     display: none;
 }
+.card-title {
+    background-color: rgba(0, 0, 0, .3);
+}
 
 /*
 .row.col{

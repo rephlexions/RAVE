@@ -1,11 +1,33 @@
 $("document").ready(function () {
    var parsed_data = JSON.parse(json_page_data);
-    console.log(parsed_data);
     $("#wiki-data").html(parsed_data);
-    $("p").addClass("flow-text");
+    $('p').addClass("flow-text");
+
     $('a[title]').each(function(){
         this.href = this.href.replace("/wiki/", "/view/?page=");
-});
+    });
+
+    $('div[ aria-labelledby]').each(function () {
+        this.remove();
+    });
+
+    $('table.mbox-small').each(function () {
+    this.remove();
+    });
+
+    $('h2').each(function () {
+    //this.addClass("section");
+    });
+    // TODO Find a way to get the bigger res version in  the srsset attribute
+    $('a.image').each(function () {
+        var child = this.firstElementChild;
+        this.href = child.src;
+        var n = child.srcset.exec('\s\w');
+        var k = child.srcset.search('\s');
+        console.log(n)
+    })
+
+
 });
 // TODO In order to get all images in their original resolution you need to make an
 // TODO API call for each image
