@@ -38,7 +38,7 @@ $("document").ready(function () {
         $("div.card-image").children("img").each(function (i, obj) {
             if(parsed_data['images']['query']['pages'][page_ids[i]].hasOwnProperty('thumbnail')){
                $(this).attr("src", parsed_data['images']['query']['pages'][page_ids[i]]['thumbnail']['source']);
-               console.log(parsed_data['images']['query']['pages'][page_ids[i]]['thumbnail']['source']);
+               //console.log(parsed_data['images']['query']['pages'][page_ids[i]]['thumbnail']['source']);
             }
             else{
                 i++;

@@ -39,6 +39,10 @@ https://en.wikipedia.org/w/api.php?action=query&titles=Al-Farabi&prop=pageimages
 URL to get intro text
 https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=Stack%20Overflow
 
+https://en.wikipedia.org/w/api.php?action=query&format=json&prop=images&titles=Post-Impressionism&imlimit=max
+https://en.wikipedia.org/w/api.php?action=query&titles=File:1914%20Redon%20Zyklop%20anagoria.JPG|File:Affiche%20Volpini.jpg|File:Bonnard-the%20dining%20room%20in%20the%20country.jpg&prop=imageinfo&iiprop=url&format=json
+
+
 """
 """
 # /w/api.php?action=parse&format=json&page=Cubism&prop=text%7Cimages&disableeditsection=1&contentmodel=wikitext

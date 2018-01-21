@@ -1,3 +1,7 @@
+body{
+    text-align: justify;
+
+}
 .search-results{
     display: none;
 }
@@ -5,27 +9,19 @@
     background-color: rgba(0, 0, 0, .3);
 }
 
-/*
-.row.col{
+.brand-logo{
+    margin-left: 15%;
+}
+
+#nav-mobile{
+    margin-right: 15%;
+}
+div.thumb{
+    float: right;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    clear: left;
+}
+h3{
     clear: both;
 }
-.col.l3 {
-
-    margin-left: auto;
-    left: auto;
-    right: auto;
-}
-
-
-
-.card-content{
-    text-align: center;
-    width: 250px;
-    height: 138px;
-}
-
-.card-image{
-    width: 250px;
-    height: 197px;
-}
-*/

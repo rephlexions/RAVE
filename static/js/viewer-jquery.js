@@ -1,7 +1,7 @@
 $("document").ready(function () {
    var parsed_data = JSON.parse(json_page_data);
     $("#wiki-data").html(parsed_data);
-    $('p').addClass("flow-text");
+    //$('p').addClass("flow-text");
 
     $('a[title]').each(function(){
         this.href = this.href.replace("/wiki/", "/view/?page=");
@@ -18,15 +18,44 @@ $("document").ready(function () {
     $('h2').each(function () {
     //this.addClass("section");
     });
-    // TODO Find a way to get the bigger res version in  the srsset attribute
-    $('a.image').each(function () {
-        var child = this.firstElementChild;
-        this.href = child.src;
-        var n = child.srcset.exec('\s\w');
-        var k = child.srcset.search('\s');
-        console.log(n)
-    })
 
+    $('span.mw-headline').addClass('section scrollspy');
+
+    $('div.toc').children('ul').addClass('section table-of-contents');
+
+    $('img').each(function () {
+        $(this).addClass('materialboxed');
+        $(this).removeClass('thumbnail');
+        $(this).removeAttr('srcset');
+        $(this).removeAttr('width');
+        $(this).removeAttr('height');
+        //$(this).addClass('col s12 m6 l12');
+
+    });
+
+    $('div.thumbinner').each(function () {
+        $(this).attr('style', 'width:400px;');
+        $(this).addClass('parallax-container');
+    });
+
+    $('div.material-placeholder').each(function () {
+        console.log();
+        $(this).addClass('parallax');
+    });
+
+    $('img[src]').each(function () {
+        var patt = new RegExp('(\\/\\d\\w+-)');
+        this.src = this.src.replace(patt, '/400px-');
+    });
+
+    $('a.image').each(function () {
+        var img = this.firstElementChild;
+        $(this).removeAttr('href');
+    });
+
+    $('.scrollspy').scrollSpy();
+    $('.materialboxed').materialbox();
+    $('.parallax').parallax();
 
 });
 // TODO In order to get all images in their original resolution you need to make an
