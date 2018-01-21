@@ -2,7 +2,7 @@ $("document").ready(function () {
    var parsed_data = JSON.parse(json_page_data);
     $("#wiki-data").html(parsed_data);
     //$('p').addClass("flow-text");
-
+    console.log(parsed_data);
     $('a[title]').each(function(){
         this.href = this.href.replace("/wiki/", "/view/?page=");
     });
@@ -22,6 +22,9 @@ $("document").ready(function () {
     $('span.mw-headline').addClass('section scrollspy');
 
     $('div.toc').children('ul').addClass('section table-of-contents');
+    $('div.toc').appendTo('#scrollspy_table');
+    $('div.toctitle').children('h2').hide();
+
 
     $('img').each(function () {
         $(this).addClass('materialboxed');

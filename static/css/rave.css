@@ -25,3 +25,25 @@ div.thumb{
 h3{
     clear: both;
 }
+nav{
+    color: #364f6b;
+}
+div.toc {
+    position: fixed;
+    float: left;
+    right: 80%;
+    top: 15%;
+    clear: both;
+    margin-left: 1%;
+    margin-right: 6%;
+}
+
+div.row{
+    clear: both;
+}
+
+div.thumb{
+    height: inherit;
+    width: inherit;
+    max-width: 100%;
+}
