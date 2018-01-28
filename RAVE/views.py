@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
 from django.views.generic import View
 from .forms import SearchForm
 from .utils.api_utils import get_wiki_page, get_search_results
@@ -37,7 +36,6 @@ class SearchView(View):
 class CategoryViewer(View):
     template_name = 'viewer.html'
 
-    # TODO Rework this function
     def get(self, request):
         form = SearchForm()
         query = request.GET.get('page')
@@ -47,19 +45,3 @@ class CategoryViewer(View):
         context = {'json_data': json.dumps(data), 'form': form}
 
         return render(request, self.template_name, context)
-
-
-def get_data(request):
-    if request.method == 'GET':
-        page = request.GET['page']
-        data = get_wiki_page(page)
-
-        return JsonResponse(data, safe=False)
-
-
-def get_results(request):
-    if request.method == 'GET':
-        search_query = request.GET
-        search_results = get_search_results(search_query)
-
-        return JsonResponse(search_results, safe=False)

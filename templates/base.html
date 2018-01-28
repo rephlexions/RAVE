@@ -10,6 +10,8 @@
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="{% static "css/materialize.min.css" %}"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="{% static "css/rave.css" %}"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="{% static "css/viewer.css" %}"  media="screen,projection"/>
+
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="https://code.jquery.com/jquery-3.2.1.js"
@@ -19,14 +21,17 @@
         <script type="text/javascript" src="{% static "js/materialize.min.js" %}"></script>
     </head>
     <body>
-      <nav class="light-blue  lighten-1">
-        <div class="nav-wrapper">
-          <a href="/home/" class="brand-logo">Tech Web</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="">About</a></li>
-          </ul>
-        </div>
-      </nav>
+    <div class="row">
+        <nav>
+            <div class=" container nav-wrapper">
+                <a href="/home/" class="brand-logo">Art Movements</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
 
         <div class="container">
         {% block content %}
@@ -34,7 +39,7 @@
         {% endblock content %}
         </div>
         <br>
-        <footer class="page-footer light-blue lighten-1">
+        <footer class="page-footer">
         <div class="container">
         <div class="row">
           <div class="col l6 s12">

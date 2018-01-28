@@ -1,11 +1,12 @@
 {% extends "base.html" %} {% load staticfiles %} {% block content %}
 
     <br> {% include "form.html" %}
-    <br>
-    <h5>Something to get you started</h5>
+    <div class="divider"></div>
+    <h5></h5>
 
     <!-- ## https://mymodernmet.com/important-art-movements/   -->
-    <div class="row">
+    <div class="section">
+        <div class="row">
         <div class="col s12 m6 l4">
             <div class="card hoverable medium">
                 <div class="card-image">
@@ -18,7 +19,7 @@
                     </p>
                 </div>
                 <div class="card-action">
-                    <a href="/view/?page=Post-Impressionism">This is a link</a>
+                    <a href="/view/?page=Post-Impressionism">Open Article</a>
                 </div>
             </div>
         </div>
@@ -32,7 +33,7 @@
                     <p>Realism was an artistic movement that began in France in the 1850s, after the 1848 Revolution.</p>
                 </div>
                 <div class="card-action">
-                    <a href="/view/?page=Realism (art movement)">This is a link</a>
+                    <a href="/view/?page=Realism (art movement)">Open Article</a>
                 </div>
             </div>
         </div>
@@ -46,54 +47,300 @@
                     <p>Impressionism originated with a group of Paris-based artists during the 1870s and 1880s.</p>
                 </div>
                 <div class="card-action">
-                    <a href="/view/?page=Impressionism">This is a link</a>
+                    <a href="/view/?page=Impressionism">Open Article</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col s12 m6 l3 l4">
-            <div class="card hoverable medium">
-                <div class="card-image">
-                    <img src="{% static "images/Albert_Gleizes_Femme_aux_Phlox.jpg" %}">
-                    <span class="card-title">Cubism</span>
-                </div>
-                <div class="card-content">
-                    <p>Cubism has been considered to be among the most influential art movements of the 20th century.</p>
-                </div>
-                <div class="card-action">
-                  <a href="/view/?page=Cubism">This is a link</a>
-                </div>
-              </div>
+        <div class="row">
+            <div class="col s12 m6 l3 l4">
+                <div class="card hoverable medium">
+                    <div class="card-image">
+                        <img src="{% static "images/Albert_Gleizes_Femme_aux_Phlox.jpg" %}">
+                        <span class="card-title">Cubism</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Cubism has been considered to be among the most influential art movements of the 20th century.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="/view/?page=Cubism">Open Article</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+                <div class="card hoverable medium">
+                    <div class="card-image">
+                        <img src="{% static "images/" %}">
+                        <span class="card-title">Surrealism</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Surrealism is a cultural movement that began in the early 1920s, and is best known for its visual artworks and writings.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="/view/?page=Surrealism">Open Article</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+                <div class="card hoverable medium">
+                    <div class="card-image">
+                        <img src="{% static "images/" %}">
+                        <span class="card-title">Abstract Expressionism</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Abstract expressionism is a post–World War II art movement in American painting, developed in New York in the 1940s</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="/view/?page=Abstract_expressionism">Open Article</a>
+                    </div>
+                  </div>
+            </div>
         </div>
-        <div class="col s12 m6 l3 l4">
-            <div class="card hoverable medium">
+        <div class="row hidden-row">
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
                 <div class="card-image">
-                    <img src="{% static "images/" %}">
-                    <span class="card-title">Surrealism</span>
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
                 </div>
                 <div class="card-content">
-                    <p>Surrealism is a cultural movement that began in the early 1920s, and is best known for its visual artworks and writings.</p>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                  <a href="/view/?page=Surrealism">This is a link</a>
+                  <a href="#">This is a link</a>
                 </div>
               </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
         </div>
-        <div class="col s12 m6 l3 l4">
-            <div class="card hoverable medium">
+        <div class="row hidden-row">
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
                 <div class="card-image">
-                    <img src="{% static "images/" %}">
-                    <span class="card-title">Abstract Expressionism</span>
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
                 </div>
                 <div class="card-content">
-                    <p>Abstract expressionism is a post–World War II art movement in American painting, developed in New York in the 1940s</p>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                  <a href="/view/?page=Abstract_expressionism">This is a link</a>
+                  <a href="#">This is a link</a>
                 </div>
               </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row hidden-row">
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row hidden-row">
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row hidden-row">
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="images/sample-1.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s1  m3 l3 push-l5 push-s4 push-m5">
+                <a href="#" id="load"><i class="waves-effect material-icons large ">expand_more</i></a>
+            </div>
         </div>
     </div>
+    <script type="text/javascript" src="{% static "js/home-jquery.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/form-jquery.js" %}"></script>
+
+
 
 {% endblock content %}

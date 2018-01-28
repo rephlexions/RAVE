@@ -3,6 +3,10 @@ import json
 
 
 def get_search_results(param):
+    """
+    :param param: search query
+    :return: search results, intro text and first image for each result in json format
+    """
     payload = {'search': param}
     search_req = requests.get("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&namespace=0%7C14&limit=12", params=payload)
 
@@ -12,7 +16,7 @@ def get_search_results(param):
         string_titles = '|'.join(titles_list)
         payload = {'titles': string_titles}
         images_req = requests.get(
-            "https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&pithumbsize=600&indexpageids=1",
+            "https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&pithumbsize=700&indexpageids=1",
             params=payload)
         images_results = images_req.json()
 
@@ -21,6 +25,10 @@ def get_search_results(param):
 
 
 def get_wiki_page(param):
+    """
+    :param param: page title
+    :return: Parsed Wikipedia text as json
+    """
     payload = {'page': param}
     r = requests.get('https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&disableeditsection=1', params=payload)
 

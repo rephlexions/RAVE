@@ -1,0 +1,72 @@
+h2.section{
+    clear: both;
+    width: 100%;
+
+}
+h3{
+    clear: both;
+}
+
+/* Table of Contents */
+#toc-card {
+    position: fixed;
+    float: left;
+    right: 80%;
+    top: 15%;
+    clear: right;
+    margin-left: 1%;
+    margin-right: 6%;
+    font-size: small;
+    margin-top: 8.4%;
+    background-color: #3fc1c9;
+    overflow: hidden;
+}
+div.toc span.tocnumber,  span.toctext{
+    color: white;
+}
+
+div.row{
+    clear: both;
+}
+
+/*Images*/
+div.thumbinner{
+    float: right;
+    max-width: 60%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+img.thumbimage{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    float: right;
+
+}
+
+div.thumbcaption{
+    float: right;
+    width: 100%;
+    padding: 2%;
+}
+/*Hide info tables*/
+table.infobox{
+    display: none;
+}
+span.haudio{
+    display: none;
+}
+
+ul.gallery{
+    max-width: 100%;
+}
+a.image{
+    max-width: 100%;
+}
+img.materialboxed{
+    max-width: 100%;
+}
+
+div.hidden-row{
+    display: none;
+}

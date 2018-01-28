@@ -16,15 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from RAVE.views import HomeView, CategoryViewer, SearchView, get_data, get_results
+from RAVE.views import HomeView, CategoryViewer, SearchView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/$', HomeView.as_view(), name='home'),
     url(r'^view/$', CategoryViewer.as_view(), name='view'),
     url(r'^results/$', SearchView.as_view(), name='results'),
-    url(r'^ajax/data/$', get_data),
-    url(r'^ajax/search/$', get_results),
+    #url(r'^ajax/data/$', get_data),
+    #url(r'^ajax/search/$', get_results),
 
 ]
 # url(r'^view/(?P<page>\[a-z,A-Z,0-9_.-]*)/$', CategoryViewer.as_view(), name='view'),
