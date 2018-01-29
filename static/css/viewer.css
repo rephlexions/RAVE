@@ -3,20 +3,25 @@ h2.section{
     width: 100%;
 
 }
+
 h3{
     clear: both;
 }
+#wiki-data{
+    font-size: medium;
+}
+/*Crossref Publications*/
 
 /* Table of Contents */
 #toc-card {
     position: fixed;
-    float: left;
+   /* float: left;
     right: 80%;
-    top: 15%;
-    clear: right;
-    margin-left: 1%;
-    margin-right: 6%;
-    font-size: small;
+    top: 14%;
+    clear: both;
+    margin-left: 5%;
+    margin-right: 6%;*/
+    font-size: 1em;
     margin-top: 8.4%;
     background-color: #3fc1c9;
     overflow: hidden;

@@ -1,8 +1,6 @@
 $(document).ready(function(){
     $('input.autocomplete').autocomplete({
       data: {
-        "Action painting": null,
-        "Afrofuturism": null,
         "Art movement":null,
         "Art periods":null,
         "List of art movements":null,
@@ -231,6 +229,8 @@ $(document).ready(function(){
         "Woodlands style":null,
         "Zenitism":null,
         "Zero (art)":null,
+          // TODO Keep this or not?
+        /*
         "Category:Art movements by country":null,
         "Category:Baroque art":null,
         "Category:Rococo art":null,
@@ -293,6 +293,7 @@ $(document).ready(function(){
         "Category:Underground comix":null,
         "Category:Vienna Secession":null,
         "Category:Art movement stubs":null
+        */
       },
       limit:5
     });

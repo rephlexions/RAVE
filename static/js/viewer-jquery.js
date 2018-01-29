@@ -1,10 +1,20 @@
 $('document').ready(function () {
+    //Get page name
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++){
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    var pagename = vars['page'];
+    $('div.mw-parser-output').prepend('<h2 id="pagetitle"></h2>');
+    $('#pagetitle').text(pagename);
 
    var parsed_data = JSON.parse(json_page_data);
     $("#wiki-data").html(parsed_data);
 
-    //$('p').addClass("flow-text");
-
+    $('#wiki-data').addClass("flow-text");
     $('a[title]').each(function(){
         this.href = this.href.replace("/wiki/", "/view/?page=");
     });
@@ -60,7 +70,7 @@ $('document').ready(function () {
     //Get bigger images
     $('img[src]').each(function () {
         var patt = new RegExp('(\\/\\d\\w+-)');
-        this.src = this.src.replace(patt, '/500px-');
+        this.src = this.src.replace(patt, '/600px-');
     });
 
     $('a.image').each(function () {
@@ -75,7 +85,9 @@ $('document').ready(function () {
 
     //Initialize Materialize effects
     $('.scrollspy').scrollSpy();
-    //$('.materialboxed').materialbox();
+    $('.materialboxed').materialbox();
+    $('.collapsible').collapsible();
+    $('.tabs').tabs();
     //$('.parallax').parallax();
 
 });
