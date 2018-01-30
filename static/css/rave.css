@@ -1,10 +1,11 @@
 body{
     text-align: justify;
-
 }
+
 nav{
     background-color: #364f6b;
 }
+
 span.card-title {
     background-color: rgba(0, 0, 0, .3);
     width: 359px;
@@ -23,4 +24,10 @@ div.card-image{
     margin: auto;
 }
 
+#navbar-form{
+    display: none;
+}
+#navbar-form input, select, textarea{
+    color: white;
+}
 

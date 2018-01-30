@@ -16,8 +16,8 @@ $("document").ready(function () {
 
     var parsed_data = JSON.parse(jsondata);
     var titles = parsed_data["text"][1];
-    console.log(parsed_data);
     var intro_text = parsed_data["text"][2];
+
     if(titles.length === 0){
         var txt = $("<h5></h5>").text("Couldn't find anything :(");
         $("div.empty-results").append(txt);

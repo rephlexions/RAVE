@@ -1,15 +1,17 @@
 $('document').ready(function () {
     //Get page name
     var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('#');
     for(var i = 0; i < hashes.length; i++){
         hash = hashes[i].split('=');
         vars.push(hash[0]);
         vars[hash[0]] = hash[1];
     }
     var pagename = vars['page'];
-    $('div.mw-parser-output').prepend('<h2 id="pagetitle"></h2>');
-    $('#pagetitle').text(pagename);
+    console.log(pagename);
+    var titleheader = $("<h2></h2>");    // Create with jQuery
+
+    $('div.mw-parser-output').prepend(titleheader);
 
    var parsed_data = JSON.parse(json_page_data);
     $("#wiki-data").html(parsed_data);
@@ -22,6 +24,8 @@ $('document').ready(function () {
         $(this).remove();
     });
     $('table.infobox').removeAttr('style');
+    $('#navbar-form').show();
+
 
     //Scrollspy
     //Remove toclevel-2 elements from the ToC
