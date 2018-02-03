@@ -39,7 +39,6 @@ class CategoryViewer(View):
     def get(self, request):
         form = SearchForm()
         query = request.GET.get('page')
-        print(request.GET['page'])
         data = get_wiki_page(query)
 
         context = {'json_data': json.dumps(data), 'form': form}

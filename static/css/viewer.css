@@ -26,6 +26,7 @@ h3{
     background-color: #3fc1c9;
     overflow: hidden;
 }
+
 div.toc span.tocnumber,  span.toctext{
     color: white;
 }
@@ -72,6 +73,14 @@ img.materialboxed{
     max-width: 100%;
 }
 
-div.hidden-row{
-    display: none;
+
+/* Tab Colors*/
+.tabs .tab a{
+    color: #009688;
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+    color: #00796b;
+}
+.tabs .indicator {
+    background-color: #fc5185;
 }

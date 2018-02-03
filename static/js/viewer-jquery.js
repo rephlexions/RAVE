@@ -7,16 +7,18 @@ $('document').ready(function () {
         vars.push(hash[0]);
         vars[hash[0]] = hash[1];
     }
+    /* Add page Title
     var pagename = vars['page'];
     console.log(pagename);
-    var titleheader = $("<h2></h2>");    // Create with jQuery
-
+    var titleheader = $("<h2></h2>").text(pagename);    // Create with jQuery
     $('div.mw-parser-output').prepend(titleheader);
-
+*/
    var parsed_data = JSON.parse(json_page_data);
-    $("#wiki-data").html(parsed_data);
+   console.log(parsed_data);
+   var wiki_data = parsed_data['wiki'];
 
-    $('#wiki-data').addClass("flow-text");
+    $("#wiki-data").html(wiki_data).addClass("flow-text");
+
     $('a[title]').each(function(){
         this.href = this.href.replace("/wiki/", "/view/?page=");
     });
@@ -93,6 +95,7 @@ $('document').ready(function () {
     $('.collapsible').collapsible();
     $('.tabs').tabs();
     //$('.parallax').parallax();
+
 
 });
 /*  In order to get all images in their original resolution you need to make an

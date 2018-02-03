@@ -3,3 +3,21 @@ h4{
     text-align: center;
 
 }
+
+span.card-title {
+    background-color: rgba(0, 0, 0, .3);
+    width: 359px;
+}
+
+div.card-content p{
+    text-overflow: ellipsis;
+}
+
+div.card-image{
+    display: block;
+    margin: auto;
+}
+
+div.hidden-row{
+    display: none;
+}

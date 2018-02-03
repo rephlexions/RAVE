@@ -6,22 +6,9 @@ nav{
     background-color: #364f6b;
 }
 
-span.card-title {
-    background-color: rgba(0, 0, 0, .3);
-    width: 359px;
-}
 
 footer{
     color: #fc5185;
-}
-
-div.card-content p{
-    text-overflow: ellipsis;
-}
-
-div.card-image{
-    display: block;
-    margin: auto;
 }
 
 #navbar-form{
