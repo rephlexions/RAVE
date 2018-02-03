@@ -11,6 +11,9 @@ h3{
     font-size: medium;
 }
 /*Crossref Publications*/
+div.crossref-card{
+    display: none;
+}
 
 /* Table of Contents */
 #toc-card {
