@@ -64,7 +64,7 @@ $('document').ready(function () {
 
     $('div.thumbinner').each(function () {
         $(this).removeAttr('style');
-        $(this).addClass('z-depth-1')
+        $(this).addClass('z-depth-1');
         //$(this).attr('style', 'width:500px height:668.3;');
         //$(this).addClass('parallax-container');
     });
@@ -77,7 +77,7 @@ $('document').ready(function () {
     //Get bigger images
     $('img[src]').each(function () {
         var patt = new RegExp('(\\/\\d\\w+-)');
-        this.src = this.src.replace(patt, '/600px-');
+        this.src = this.src.replace(patt, '/400px-');
     });
 
     $('a.image').each(function () {
@@ -105,37 +105,38 @@ $('document').ready(function () {
 
         var crossref_data = JSON.parse(parsed_data['crossref']);
         var items = crossref_data['message']['items'];
+        console.log(items);
+        console.log(typeof items);
 
+        if(items[0].hasOwnProperty('author')){
+            console.log('found it');
+        }
         $('div.crossref-card').each(function (i) {
-            var title = items[i]['title'][0];
-            $(this).find('span.card-title').text(title);
 
-            var url = items[i]['URL'];
-                $(this).find('a').attr('href', url);
-
-            if(items.hasOwnProperty('author')){
-                var author = items[i]['author'][0]['given'] + ' ' + items[i]['author'][0]['family'];
-                $(this).find('p.crossref-author').text(author);
+            if(items[i].hasOwnProperty('author')){
+                console.log(true);
+                 var author = items[i]['author'][0]['given'] + ' ' + items[i]['author'][0]['family'];
+                 $(this).find('p.crossref-author').text(author);
             }
 
-            if(items.hasOwnProperty('publisher')){
+            if(items[i].hasOwnProperty('publisher')){
                 var publisher = items[i]['publisher'];
                 $(this).find('p.crossref-publisher').text(publisher);
             }
 
-            if(items.hasOwnProperty('title')){
-
+            if(items[i].hasOwnProperty('title')){
+                var title = items[i]['title'][0];
+                $(this).find('span.card-title').text(title);
             }
-            if(items.hasOwnProperty('URL')){
 
+            if(items[i].hasOwnProperty('URL')){
+                var url = items[i]['URL'];
+                $(this).find('a').attr('href', url);
             }
+
             $(this).show();
         });
-        /*
-        $('span.card-title').each(function (i) {
-            var title = items[i]['title'][0];
-            $(this).text(title);
-        })*/
+
     }
 
 

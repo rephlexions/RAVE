@@ -87,3 +87,11 @@ img.materialboxed{
 .tabs .indicator {
     background-color: #fc5185;
 }
+
+div.card.crossref-card.teal{
+
+}
+
+span.card-title{
+    text-overflow: ellipsis;
+}
