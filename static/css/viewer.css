@@ -1,7 +1,6 @@
 h2.section{
     clear: both;
     width: 100%;
-
 }
 
 h3{
@@ -54,6 +53,7 @@ img.thumbimage{
 }
 
 div.thumbcaption{
+    font-size: smaller;
     float: right;
     width: 100%;
     padding: 2%;
@@ -88,10 +88,27 @@ img.materialboxed{
     background-color: #fc5185;
 }
 
-div.card.crossref-card.teal{
+span.card-title{
+    text-align: left;
+    max-height: 32px;
+    overflow: hidden;
+}
+
+div.card.crossref-card{
 
 }
 
-span.card-title{
-    text-overflow: ellipsis;
+@media only screen and (max-width: 700px){
+    div.thumbinner{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        clear: both;
+        font-size: smaller;
+        width: 100%;
+        padding: 2%;
+    }
+    div.thumbcaption{
+        display: none;
+    }
 }

@@ -7,12 +7,14 @@ $('document').ready(function () {
         vars.push(hash[0]);
         vars[hash[0]] = hash[1];
     }
-    /* Add page Title
-    var pagename = vars['page'];
-    console.log(pagename);
-    var titleheader = $("<h2></h2>").text(pagename);    // Create with jQuery
-    $('div.mw-parser-output').prepend(titleheader);
-*/
+
+
+    // TODO Add page Title
+    var pagename = getUrlParameter('page');
+    console.log(typeof pagename);
+    var htmltitle = '<h2>' + pagename + '</h2>';
+    $('div.mw-parser-output').append(htmltitle);
+
 
    var parsed_data = JSON.parse(json_page_data);
    var wiki_data = parsed_data['wiki'];
@@ -28,20 +30,7 @@ $('document').ready(function () {
     $('table.infobox').removeAttr('style');
     $('#navbar-form').show();
 
-
-    //Scrollspy
-    //Remove toclevel-2 elements from the ToC
-    $('ul').children('li.toclevel-2').each(function () {
-       $(this).remove();
-    });
-    $('h2').each(function () {
-        $(this).addClass("section");
-        //$(this).append('<div class="divider"></div>')
-    });
-    $('span.mw-headline').addClass('scrollspy');
-    $('div.toc').children('ul').addClass('section table-of-contents');
-    $('div.toc').appendTo('#scrollspy-table');
-    $('div.toctitle').children('h2').hide();
+    $('div.toc').remove();
 
     //Page cleaning
     $('table.mbox-small').each(function () {
@@ -51,6 +40,13 @@ $('document').ready(function () {
     $('table.vertical-navbox').remove();
     $('table.wikitable').remove();
     $('div.navigation-not-searchable').remove();
+    $('ul.gallery').remove();
+    $('div.reflist').remove();
+    $('div.refbegin').remove();
+    $('sup').remove();
+    $('#Gallery').remove();
+    $('#Notes').remove();
+    $('#References').remove();
 
     //Images
     $('img').each(function () {
@@ -61,60 +57,37 @@ $('document').ready(function () {
         $(this).removeAttr('height');
         $(this).addClass('responsive-img');
     });
-
     $('div.thumbinner').each(function () {
         $(this).removeAttr('style');
         $(this).addClass('z-depth-1');
+
         //$(this).attr('style', 'width:500px height:668.3;');
         //$(this).addClass('parallax-container');
     });
-    /*
-    $('div.material-placeholder').each(function () {
-        $(this).addClass('parallax');
-    });
-    */
-
     //Get bigger images
     $('img[src]').each(function () {
         var patt = new RegExp('(\\/\\d\\w+-)');
-        this.src = this.src.replace(patt, '/400px-');
+        this.src = this.src.replace(patt, '/600px-');
     });
-
     $('a.image').each(function () {
         var img = $(this).firstElementChild;
         $(this).removeAttr('href');
     });
 
-    $('div.thumb').each(function () {
-        var img =  $(this).children('img');
-
-    });
-
     //Initialize Materialize effects
-    $('.scrollspy').scrollSpy();
     $('.materialboxed').materialbox();
     $('.collapsible').collapsible();
     $('.tabs').tabs();
-    //$('.parallax').parallax();
-
-
 
     /************************************************/
     if(parsed_data['crossref'] !== null){
         $('li.disabled').removeClass('disabled');
-
         var crossref_data = JSON.parse(parsed_data['crossref']);
         var items = crossref_data['message']['items'];
-        console.log(items);
-        console.log(typeof items);
 
-        if(items[0].hasOwnProperty('author')){
-            console.log('found it');
-        }
         $('div.crossref-card').each(function (i) {
 
             if(items[i].hasOwnProperty('author')){
-                console.log(true);
                  var author = items[i]['author'][0]['given'] + ' ' + items[i]['author'][0]['family'];
                  $(this).find('p.crossref-author').text(author);
             }
@@ -136,12 +109,26 @@ $('document').ready(function () {
 
             $(this).show();
         });
-
     }
 
-
-
 });
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+
 /*  In order to get all images in their original resolution you need to make an
     API call for each image
     https://en.wikipedia.org/w/api.php?action=query&titles=File:Georges_Braque,_1909-10,_La_guitare_(Mandora,_La_Mandore),
