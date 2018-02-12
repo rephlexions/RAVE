@@ -11,3 +11,7 @@ div.card-image{
     display: block;
     margin: auto;
 }
+
+div.search-result{
+display: none;
+}

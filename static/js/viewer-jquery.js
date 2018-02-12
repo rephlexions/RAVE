@@ -44,6 +44,8 @@ $('document').ready(function () {
     $('div.reflist').remove();
     $('div.refbegin').remove();
     $('sup').remove();
+    $('a.external').remove();
+    $('div.portal').remove();
     $('#Gallery').remove();
     $('#Notes').remove();
     $('#References').remove();

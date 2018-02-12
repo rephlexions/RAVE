@@ -21,3 +21,11 @@ div.card-image{
 div.hidden-row{
     display: none;
 }
+
+div.slider{
+    position: absolute;
+    z-index: -1;
+}
+#home-form{
+    margin-bottom: 10%;
+}
