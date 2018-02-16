@@ -1,23 +1,18 @@
 $('document').ready(function () {
-    //Get page name
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('#');
-    for(var i = 0; i < hashes.length; i++){
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
 
+    function test() {
+        console.log('test');
+    }
+    test();
 
     // TODO Add page Title
     var pagename = getUrlParameter('page');
-    console.log(typeof pagename);
+    console.log(pagename);
     var htmltitle = '<h2>' + pagename + '</h2>';
-    $('div.mw-parser-output').append(htmltitle);
+    $('div.mw-parser-output').prepend(htmltitle);
 
-
-   var parsed_data = JSON.parse(json_page_data);
-   var wiki_data = parsed_data['wiki'];
+    var parsed_data = JSON.parse(json_page_data);
+    var wiki_data = parsed_data['wiki'];
 
     $("#wiki-data").html(wiki_data).addClass("flow-text");
 
@@ -30,7 +25,7 @@ $('document').ready(function () {
     $('table.infobox').removeAttr('style');
     $('#navbar-form').show();
 
-    $('div.toc').remove();
+
 
     //Page cleaning
     $('table.mbox-small').each(function () {
@@ -43,38 +38,40 @@ $('document').ready(function () {
     $('ul.gallery').remove();
     $('div.reflist').remove();
     $('div.refbegin').remove();
+    $('div.toc').remove();
     $('sup').remove();
     $('a.external').remove();
     $('div.portal').remove();
     $('#Gallery').remove();
     $('#Notes').remove();
     $('#References').remove();
-    ('')
     $('div.slider').hide();
 
     //Images
     $('img').each(function () {
-        $(this).addClass('materialboxed');
+       // $(this).addClass('materialboxed');
         $(this).removeClass('thumbnail');
         $(this).removeAttr('srcset');
         $(this).removeAttr('width');
         $(this).removeAttr('height');
         $(this).addClass('responsive-img');
     });
+    $('img.thumbimage').on('load', function () {
+        var width = this.clientWidth;
+        var height = this.clientHeight;
+        $(this).closest('div.thumbinner').width(width).height(height + $(this).siblings('div.thumbcaption').height);
+        console.log($(this).closest('div.thumbinner'));
+    });
     $('div.thumbinner').each(function () {
         $(this).removeAttr('style');
         $(this).addClass('z-depth-1');
-
-        //$(this).attr('style', 'width:500px height:668.3;');
-        //$(this).addClass('parallax-container');
     });
     //Get bigger images
     $('img[src]').each(function () {
         var patt = new RegExp('(\\/\\d\\w+-)');
-        this.src = this.src.replace(patt, '/600px-');
+        this.src = this.src.replace(patt, '/400px-');
     });
     $('a.image').each(function () {
-        var img = $(this).firstElementChild;
         $(this).removeAttr('href');
     });
 
@@ -138,3 +135,15 @@ var getUrlParameter = function getUrlParameter(sParam) {
     https://en.wikipedia.org/w/api.php?action=query&titles=File:Georges_Braque,_1909-10,_La_guitare_(Mandora,_La_Mandore),
     _oil_on_canvas,_71.1_x_55.9_cm,_Tate_Modern,_London.jpg&prop=imageinfo&iiprop=url&format=json
 */
+
+/*
+    //Get page name
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('#');
+    for(var i = 0; i < hashes.length; i++){
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+
+ */

@@ -30,7 +30,8 @@ div.slider{
     z-index: -1;
 }
 #home-form{
-    margin-bottom: 10%;
+    margin-bottom: 15%;
+    margin-top: 10%;
 }
 
 #id_search{

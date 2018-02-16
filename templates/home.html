@@ -1,15 +1,15 @@
-{% extends "base.html" %} {% load staticfiles %} {% block content %}
+{% extends "base.html" %} {% load staticfiles %}
 
+{% block content %}
 
     <div class="container">
         <div class="row" id="home-form">
-                <div class="col s12 m6 l6 push-l3 push-m3">
-                    {% include "form.html" %}
-                </div>
+            <div class="col s12 m6 l6 push-l3 push-m3">
+                {% include "form.html" %}
+            </div>
         </div>
-        <div class="divider"></div>
+
         <h4>Important Art Movements</h4>
-        <!-- ## https://mymodernmet.com/important-art-movements/   -->
         <div class="section">
             <div class="row">
             <div class="col s12 m6 l4">
@@ -191,11 +191,11 @@
                     <div class="card-content">
                       <p>
                           Romanticism is characterized by its emphasis on emotion and individualism as well
-                          as glorification of all the past and nature.
+                          as glorification of all the past.
                       </p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Romanticism">Open Article</a>
                     </div>
                   </div>
                 </div>
@@ -209,8 +209,8 @@
                     </div>
                     <div class="card-content">
                       <p>
-                          The Decadent Movement was characterized by self-disgust, sickness at the world,
-                          general skepticism, delight in perversion and employment of crude humor.
+                          The Decadent Movement was characterized by self-disgust, sickness at the world and
+                          general skepticism.
                       </p>
                     </div>
                     <div class="card-action">
@@ -237,117 +237,117 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/Tie-dye.png" %}">
+                      <span class="card-title">Psychedelic art</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>
+                          Psychedelic art is inspired by psychedelic experiences
+                          and hallucinations known to follow the ingestion of psychoactive drugs.
+                      </p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Psychedelic art">Open Article</a>
                     </div>
                   </div>
                 </div>
             </div>
             <div class="row hidden-row">
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/Lenin_attempt.jpg" %}">
+                      <span class="card-title">Soviet art</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>Soviet art is the visual art that was produced in the Soviet Union.</p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Soviet art">Open Article</a>
                     </div>
                   </div>
                 </div>
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/TheKnightAtTheCrossroads.jpg"%}">
+                      <span class="card-title">Symbolism</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>Symbolism was a late nineteenth-century art movement of French, Russian and Belgian origin
+                          in poetry and other arts.</p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Symbolism (arts)">Open Article</a>
                     </div>
                   </div>
                 </div>
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg" %}">
+                      <span class="card-title">Art Nouveau</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>Art Nouveau is an international style of art, architecture and applied art,
+                          especially the decorative arts.</p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Art Nouveau">Open Article</a>
                     </div>
                   </div>
                 </div>
             </div>
             <div class="row hidden-row">
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/Christ_amongst_the_Doctors,_oil_on_canvas_painting_by_Orazio_Borgianni.jpg" %}">
+                      <span class="card-title">Caravaggisti</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>The Caravaggisti were stylistic followers of the 16th-century
+                          Italian Baroque painter Caravaggio.</p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Caravaggisti">Open Article</a>
                     </div>
                   </div>
                 </div>
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/EyeCandy3NEW.jpg" %}">
+                      <span class="card-title">Geometric abstraction</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>Geometric abstraction is a form of abstract art based on the use of geometric forms sometimes</p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Geometric abstraction">Open Article</a>
                     </div>
                   </div>
                 </div>
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/drexciya.jpg" %}">
+                      <span class="card-title">Afrofuturism</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>Afrofuturism is a cultural aesthetic that combines elements of science fiction,
+                          historical fiction, fantasy, Afrocentrism,</p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Afrofuturism">Open Article</a>
                     </div>
                   </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col s1  m3 l2 push-l5 push-s4 push-m5">
-                    <a href="#" id="load"><i class="waves-circle material-icons medium ">arrow_drop_down_circle</i></a>
+                <div class="">
+                    <a href="#" id="load"><i class="col s4  push-s4 waves-circle material-icons medium ">arrow_drop_down_circle</i></a>
                 </div>
             </div>
         </div>
