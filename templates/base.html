@@ -27,7 +27,7 @@
             <div class=" container nav-wrapper">
                 <div class="row">
                     <div class="col s3 m8 l8">
-                        <a href="/home/" class="brand-logo">
+                        <a href="/" class="brand-logo">
                             <i id="icon" class="fa fa-paint-brush" style="margin-top:15%;,text-shadow: rgb(172, 172, 172) 0px 0px 0px, rgb(184, 184, 184) 1px 1px 0px, rgb(196, 196, 196) 2px 2px 0px, rgb(208, 208, 208) 3px 3px 0px, rgb(221, 221, 221) 4px 4px 0px, rgb(233, 233, 233) 5px 5px 0px; font-size: 27px; color: rgb(63, 193, 201); height: 46px; width: 46px; line-height: 46px; border-radius: ; text-align: center; background-color: rgb(245, 245, 245);"></i>
                         </a>
                     </div>
@@ -46,7 +46,22 @@
             </div>
         </nav>
     </div>
-
+        <div class="slider">
+                <ul class="slides">
+              <li>
+                <img src={% static "images/header-slideshow/the-starry-night-1889.jpg" %}>
+              </li>
+              <li>
+                <img src={% static "images/header-slideshow/Af2NQ46copy.jpg" %}>
+              </li>
+              <li>
+                <img src={% static "images/header-slideshow/birth-venus.jpg" %}>
+              </li>
+              <li>
+                <img src={% static "images/header-slideshow/great-wave.jpg" %}>
+              </li>
+            </ul>
+        </div>
         {% block content %}
 
         {% endblock content %}

@@ -15,3 +15,8 @@ div.card-image{
 div.search-result{
 display: none;
 }
+
+div.slider{
+    position: absolute;
+    z-index: -1;
+}

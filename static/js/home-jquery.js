@@ -1,4 +1,5 @@
 $('document').ready(function () {
+
     $(function(){
         $("div").slice(0, 10).show(); // select the first ten
         $("#load").click(function(e){ // click event for load more
@@ -9,12 +10,11 @@ $('document').ready(function () {
             }
         });
     });
-    $('.slider').slider({
+    $('div.slider').slider({
         height: 200,
         indicators: false,
         interval: 3000,
     });
-
 });
 
 /*

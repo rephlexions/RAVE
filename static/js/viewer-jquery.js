@@ -49,6 +49,8 @@ $('document').ready(function () {
     $('#Gallery').remove();
     $('#Notes').remove();
     $('#References').remove();
+    ('')
+    $('div.slider').hide();
 
     //Images
     $('img').each(function () {

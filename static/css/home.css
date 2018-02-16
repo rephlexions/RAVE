@@ -1,7 +1,6 @@
 h4{
     width: 100%;
     text-align: center;
-
 }
 
 span.card-title {
@@ -10,12 +9,16 @@ span.card-title {
 }
 
 div.card-content p{
-    text-overflow: ellipsis;
+    text-align: left;
 }
 
 div.card-image{
     display: block;
     margin: auto;
+    height: 332px;
+}
+div.card-image img{
+    height: 100%;
 }
 
 div.hidden-row{
@@ -28,4 +31,8 @@ div.slider{
 }
 #home-form{
     margin-bottom: 10%;
+}
+
+#id_search{
+    background-color: white;
 }

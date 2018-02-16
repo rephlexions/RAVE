@@ -20,7 +20,7 @@ from RAVE.views import HomeView, CategoryViewer, SearchView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home/', HomeView.as_view(), name='home'),
+    url(r'^$', HomeView.as_view(), name='home'),
     url(r'^view/$', CategoryViewer.as_view(), name='view'),
     url(r'^results/$', SearchView.as_view(), name='results'),
 

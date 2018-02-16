@@ -1,9 +1,13 @@
 $('document').ready(function () {
+    $('div.slider').slider({
+    height: 200,
+    indicators: false,
+    interval: 3000,
+        });
 
     var parsed_data = JSON.parse(jsondata);
     var titles = parsed_data['text'][1];
     var intro_text = parsed_data['text'][2];
-    console.log(parsed_data);
     if(titles.length === 0){
         var txt = $('<h3></h3>').text('Couldn\'t find anything :(');
         $('#empty-results').append(txt);
@@ -21,6 +25,24 @@ $('document').ready(function () {
             }
             $(this).show();
         });
+    }
+
+});
+
+var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
 /*
         $("span.card-title").each(function (i, obj) {
             $(this).text(titles[i]);
@@ -41,21 +63,3 @@ $('document').ready(function () {
             }
 
             });*/
-    }
-
-});
-
-var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
-
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : sParameterName[1];
-            }
-        }
-    };

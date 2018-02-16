@@ -1,21 +1,6 @@
 {% extends "base.html" %} {% load staticfiles %} {% block content %}
-    <div class="slider">
-                <ul class="slides">
-              <li>
 
-                <img src={% static "images/the-starry-night-1889.jpg" %}>
-              </li>
-              <li>
-                <img src={% static "images/Af2NQ46copy.jpg" %}>
-              </li>
-              <li>
-                <img src={% static "images/birth-venus.jpg" %}>
-              </li>
-              <li>
-                <img src={% static "images/great-wave.jpg" %}>
-              </li>
-            </ul>
-        </div>
+
     <div class="container">
         <div class="row" id="home-form">
                 <div class="col s12 m6 l6 push-l3 push-m3">
@@ -90,7 +75,7 @@
                 <div class="col s12 m6 l3 l4">
                     <div class="card hoverable medium">
                         <div class="card-image">
-                            <img src="{% static "images/" %}">
+                            <img src="{% static "images/Salvadro-Dali-Sleep-via-Bureau-de-Estilo-Renata-Abranchs.jpg" %}">
                             <span class="card-title">Surrealism</span>
                         </div>
                         <div class="card-content">
@@ -104,7 +89,7 @@
                 <div class="col s12 m6 l3 l4">
                     <div class="card hoverable medium">
                         <div class="card-image">
-                            <img src="{% static "images/" %}">
+                            <img src="{% static "images/Abstract-Expressionism-Fluid-Painting-Acrylic-on-Canvas.jpg" %}">
                             <span class="card-title">Abstract Expressionism</span>
                         </div>
                         <div class="card-content">
@@ -118,44 +103,96 @@
             </div>
             <div class="row hidden-row">
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/Roy-Lichtenstein-M-Maybe-1965-detail-865x577.jpg" %}">
+                      <span class="card-title">Pop Art</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>Pop art is an art movement that emerged in Britain and the United States during the mid- to late-1950s.</p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Pop art">Open Article</a>
                     </div>
                   </div>
                 </div>
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/Janbrueghelark.jpg" %}">
+                      <span class="card-title">Baroque</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>
+                          Baroque is a highly ornate style of architecture, art and music
+                          that flourished in Europe from the early 17th.
+                      </p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Baroque">Open Article</a>
                     </div>
                   </div>
                 </div>
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/Battle_of_Lights.jpg" %}">
+                      <span class="card-title">Futurism</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>Futurism was an artistic and social movement that originated
+                          in Italy in the early 20th century. </p>
+                    </div>
+                    <div class="card-action">
+                      <a href="/view/?page=Futurism">Open Article</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row hidden-row">
+                <div class="col s12 m6 l3 l4">
+                  <div class="card medium">
+                    <div class="card-image">
+                      <img src="{% static "images/Kazimir_Malevich,_1915,_Black_Suprematic_Square_Tretyakov_Gallery,_Moscow.jpg" %}">
+                      <span class="card-title">Minimalism</span>
+                    </div>
+                    <div class="card-content">
+                      <p>
+                          Minimalism began in post–World War II Western art, most strongly with
+                          American visual arts in the 1960s and early 1970s.
+                      </p>
+                    </div>
+                    <div class="card-action">
+                      <a href="/view/?page=Minimalism">Open Article</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l3 l4">
+                  <div class="card medium">
+                    <div class="card-image">
+                      <img src="{% static "images/Mengs,_Urteil_des_Paris.jpg"%}">
+                      <span class="card-title">Neoclassicism</span>
+                    </div>
+                    <div class="card-content">
+                      <p>Neoclassicism draws inspiration from the
+                          "classical" art and culture of classical antiquity.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="/view/?page=Neoclassicism">Open Article</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l3 l4">
+                  <div class="card medium">
+                    <div class="card-image">
+                      <img src="{% static "images/Eugène_Delacroix_-_La_liberté_guidant_le_peuple.jpg" %}">
+                      <span class="card-title">Romanticism</span>
+                    </div>
+                    <div class="card-content">
+                      <p>
+                          Romanticism is characterized by its emphasis on emotion and individualism as well
+                          as glorification of all the past and nature.
+                      </p>
                     </div>
                     <div class="card-action">
                       <a href="#">This is a link</a>
@@ -165,84 +202,40 @@
             </div>
             <div class="row hidden-row">
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/Jove_decadent.jpg" %}">
+                      <span class="card-title">Decadent movement</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>
+                          The Decadent Movement was characterized by self-disgust, sickness at the world,
+                          general skepticism, delight in perversion and employment of crude humor.
+                      </p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Decadent movement">Open Article</a>
                     </div>
                   </div>
                 </div>
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
+                      <img src="{% static "images/John_Baeder.jpg" %}">
+                      <span class="card-title">Photorealism</span>
                     </div>
                     <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p>
+                          Photorealism is a genre of art that encompasses painting, drawing and other graphic media.
+                      </p>
                     </div>
                     <div class="card-action">
-                      <a href="#">This is a link</a>
+                      <a href="/view/?page=Photorealism">Open Article</a>
                     </div>
                   </div>
                 </div>
                 <div class="col s12 m6 l3 l4">
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                      <a href="#">This is a link</a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="row hidden-row">
-                <div class="col s12 m6 l3 l4">
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                      <a href="#">This is a link</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col s12 m6 l3 l4">
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="images/sample-1.jpg">
-                      <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                      <a href="#">This is a link</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col s12 m6 l3 l4">
-                  <div class="card">
+                  <div class="card medium">
                     <div class="card-image">
                       <img src="images/sample-1.jpg">
                       <span class="card-title">Card Title</span>
