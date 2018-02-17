@@ -32,12 +32,12 @@ def get_wiki_page(param):
     :param param: page title
     :return: Parsed Wikipedia text as json
     """
-    #Make request to Wiki API
+    # Make request to Wiki API
     payload = {'page': param}
     wiki_r = requests.get('https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&disableeditsection=1', params=payload)
 
     if wiki_r.status_code == 200:
-        #Parsing Wiki Data
+        # Parsing Wiki Data
         parsed_wiki = wiki_r.json()
         wiki_html = parsed_wiki['parse']['text']['*']
         crossref_items = get_crossref_data(param)
@@ -71,7 +71,6 @@ def get_crossref_data(param):
         payload = {'query': crossref_topic}
         crossref_req = requests.get('https://api.crossref.org/works?sort=relevance&order=desc&mailto=ovidiu.cara@studio.unibo.it', params=payload)
         if crossref_req.status_code == 200:
-
             parsed_crossref = crossref_req.json()
             return json.dumps(parsed_crossref)
     else:

@@ -20,3 +20,12 @@ div.slider{
     position: absolute;
     z-index: -1;
 }
+
+#results-form{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#id_search{
+    background-color: white;
+}

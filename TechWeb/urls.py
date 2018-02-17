@@ -24,5 +24,4 @@ urlpatterns = [
     url(r'^view/$', CategoryViewer.as_view(), name='view'),
     url(r'^results/$', SearchView.as_view(), name='results'),
 
-
 ]

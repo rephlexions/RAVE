@@ -26,18 +26,18 @@
         <nav>
             <div class=" container nav-wrapper">
                 <div class="row">
-                    <div class="col s1">
+                    <div class="col s6 pull-s1 m1 l1">
                         <a href="/" class="brand-logo">
-                            <i id="icon" class="fa fa-paint-brush" style="margin-top:15%;,text-shadow: rgb(172, 172, 172) 0px 0px 0px, rgb(184, 184, 184) 1px 1px 0px, rgb(196, 196, 196) 2px 2px 0px, rgb(208, 208, 208) 3px 3px 0px, rgb(221, 221, 221) 4px 4px 0px, rgb(233, 233, 233) 5px 5px 0px; font-size: 27px; color: rgb(63, 193, 201); height: 46px; width: 46px; line-height: 46px; border-radius: ; text-align: center; background-color: rgb(245, 245, 245);"></i>
+                            <i id="icon" class="fa fa-paint-brush" style="margin-top:15%;,text-shadow: rgb(172, 172, 172) 0px 0px 0px, rgb(184, 184, 184) 1px 1px 0px, rgb(196, 196, 196) 2px 2px 0px, rgb(208, 208, 208) 3px 3px 0px, rgb(221, 221, 221) 4px 4px 0px, rgb(233, 233, 233) 5px 5px 0px; font-size: 27px; color: rgb(63, 193, 201); height: 46px; width: 46px; line-height: 46px; border-radius: 25px ; text-align: center; background-color: rgb(245, 245, 245);"></i>
                         </a>
                     </div>
-                    <div class="col s9 m3 push-m6">
+                    <div class="col s6 m4 offset-m6 l4 offset-l6">
                         <form class="input-field" action="/results/" method="GET" id="navbar-form">
                             {% csrf_token %}
                             {{ form }}
                         </form>
                     </div>
-                    <div class="col m2 push-l6 hide-on-small-and-down">
+                    <div class="col m1 l1 hide-on-small-and-down">
                         <ul id="nav-mobile" class="right">
                             <li><a href="">About</a></li>
                         </ul>
@@ -78,10 +78,16 @@
             <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
+            <h5 class="white-text">Me Section</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="mailto:ovidiu.cara@studio.unibo.it">Email me</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li>
+                  <a class="grey-text text-lighten-3" href="mailto:ovidiu.cara@studio.unibo.it">
+                      <i class="material-icons small">contact_mail</i></a>
+
+                  </li>
+              <li><a class="grey-text text-lighten-3" href="#!">
+                  <iframe src="https://ghbtns.com/github-btn.html?user=rephlexions&repo=RAVE&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+              </a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
             </ul>

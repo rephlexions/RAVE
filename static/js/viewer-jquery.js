@@ -1,31 +1,25 @@
 $('document').ready(function () {
 
-    function test() {
-        console.log('test');
-    }
-    test();
-
-    // TODO Add page Title
-    var pagename = getUrlParameter('page');
-    console.log(pagename);
-    var htmltitle = '<h2>' + pagename + '</h2>';
-    $('div.mw-parser-output').prepend(htmltitle);
-
     var parsed_data = JSON.parse(json_page_data);
     var wiki_data = parsed_data['wiki'];
-
     $("#wiki-data").html(wiki_data).addClass("flow-text");
 
+    // Do not redirect to Wikipedia
     $('a[title]').each(function(){
         this.href = this.href.replace("/wiki/", "/view/?page=");
     });
-    $('div[ aria-labelledby]').each(function () {
+
+    $('div[aria-labelledby]').each(function () {
         $(this).remove();
     });
+
     $('table.infobox').removeAttr('style');
     $('#navbar-form').show();
 
-
+    // Add topic title at the top of page
+    var pageTitle = getUrlParameter('page');
+    var titleHeading = '<h1>' + pageTitle + '</h1>';
+    $('div.mw-parser-output').prepend(titleHeading);
 
     //Page cleaning
     $('table.mbox-small').each(function () {
@@ -46,6 +40,8 @@ $('document').ready(function () {
     $('#Notes').remove();
     $('#References').remove();
     $('div.slider').hide();
+    $('#External_links').closest('h2').siblings('ul').remove();
+    $('#External_links').closest('h2').remove();
 
     //Images
     $('img').each(function () {
@@ -56,21 +52,27 @@ $('document').ready(function () {
         $(this).removeAttr('height');
         $(this).addClass('responsive-img');
     });
+
+    //Set size of image container based in the size of image
     $('img.thumbimage').on('load', function () {
         var width = this.clientWidth;
         var height = this.clientHeight;
         $(this).closest('div.thumbinner').width(width).height(height + $(this).siblings('div.thumbcaption').height);
-        console.log($(this).closest('div.thumbinner'));
+
     });
+
+    // Add shadow effect to the image container
     $('div.thumbinner').each(function () {
         $(this).removeAttr('style');
         $(this).addClass('z-depth-1');
     });
+
     //Get bigger images
     $('img[src]').each(function () {
         var patt = new RegExp('(\\/\\d\\w+-)');
-        this.src = this.src.replace(patt, '/400px-');
+        this.src = this.src.replace(patt, '/500px-');
     });
+
     $('a.image').each(function () {
         $(this).removeAttr('href');
     });
@@ -80,13 +82,13 @@ $('document').ready(function () {
     $('.collapsible').collapsible();
     $('.tabs').tabs();
 
-    /************************************************/
+    // Fill the Crossref tab with data
     if(parsed_data['crossref'] !== null){
         $('li.disabled').removeClass('disabled');
         var crossref_data = JSON.parse(parsed_data['crossref']);
         var items = crossref_data['message']['items'];
 
-        $('div.crossref-card').each(function (i) {
+        $('div.crossref-card').each(function (i){
 
             if(items[i].hasOwnProperty('author')){
                  var author = items[i]['author'][0]['given'] + ' ' + items[i]['author'][0]['family'];
@@ -111,7 +113,6 @@ $('document').ready(function () {
             $(this).show();
         });
     }
-
 });
 
 var getUrlParameter = function getUrlParameter(sParam) {
@@ -128,13 +129,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
-
-
-/*  In order to get all images in their original resolution you need to make an
-    API call for each image
-    https://en.wikipedia.org/w/api.php?action=query&titles=File:Georges_Braque,_1909-10,_La_guitare_(Mandora,_La_Mandore),
-    _oil_on_canvas,_71.1_x_55.9_cm,_Tate_Modern,_London.jpg&prop=imageinfo&iiprop=url&format=json
-*/
 
 /*
     //Get page name
