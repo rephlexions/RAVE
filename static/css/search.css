@@ -4,16 +4,22 @@ span.card-title {
 }
 
 div.card-content p{
+    text-align: left;
+    font-size: small;
     text-overflow: ellipsis;
 }
 
 div.card-image{
     display: block;
     margin: auto;
+    height: 332px;
+}
+div.card-image img{
+    height: 100%;
 }
 
 div.search-result{
-display: none;
+    display: none;
 }
 
 div.slider{

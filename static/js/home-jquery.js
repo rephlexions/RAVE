@@ -10,11 +10,13 @@ $('document').ready(function () {
             }
         });
     });
+
     $('div.slider').slider({
         height: 200,
         indicators: false,
         interval: 3000,
     });
+
 });
 
 /*

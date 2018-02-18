@@ -12,7 +12,6 @@ $('document').ready(function () {
     $('div[aria-labelledby]').each(function () {
         $(this).remove();
     });
-
     $('table.infobox').removeAttr('style');
     $('#navbar-form').show();
 
@@ -29,14 +28,18 @@ $('document').ready(function () {
     $('table.vertical-navbox').remove();
     $('table.wikitable').remove();
     $('div.navigation-not-searchable').remove();
-    $('ul.gallery').remove();
+
+    $('div.reflist').prev('h2').remove();
     $('div.reflist').remove();
+    $('div.refbegin').prev('h2').remove();
     $('div.refbegin').remove();
+    $('div.navbox').remove();
     $('div.toc').remove();
     $('sup').remove();
     $('a.external').remove();
     $('div.portal').remove();
     $('#Gallery').remove();
+    $('ul.gallery').prev('h2').remove();
     $('#Notes').remove();
     $('#References').remove();
     $('div.slider').hide();

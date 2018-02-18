@@ -295,6 +295,9 @@ $(document).ready(function(){
         "Category:Art movement stubs":null
         */
       },
-      limit:5
+        onAutocomplete: function () {
+            $('form').submit();
+        },
+        limit:5,
     });
 });

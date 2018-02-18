@@ -30,10 +30,29 @@ div.slider{
     z-index: -1;
 }
 #home-form{
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     margin-top: 5%;
+    clear: bottom;
 }
 
 #id_search{
     background-color: white;
+}
+
+a#load{
+    color: #3fc1c9;
+}
+
+@media only screen and (max-width: 750px){
+    #home-form{
+    margin-bottom: 20%;
+    clear: bottom;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #home-form{
+    margin-bottom: 30%;
+    clear: bottom;
+    }
 }

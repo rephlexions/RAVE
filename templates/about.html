@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% load staticfiles %}
+
+{% block content%}
+    <div class="container flow-text">
+        <h3>About Resource Visualizer</h3>
+        <p>
+            The project allows you to view data about Art Movements retrieved from two APIs, Wikipedia
+            and Crossref.
+        </p>
+        <h4>Technologies Used</h4>
+        <ul>
+            <li>Python</li>
+            <li><a href="https://www.djangoproject.com/">Django Web Framework</a></li>
+            <li>HTML & CSS</li>
+            <li><a href="https://jquery.com/">Javascript & JQuery</a></li>
+            <li><a href="http://next.materializecss.com/">Materialize Framework</a></li>
+            <li><a href="https://www.mediawiki.org/wiki/API:Main_page">Wikipedia API</a></li>
+            <li><a href="https://github.com/CrossRef/rest-api-doc">CrossRef API</a></li>
+        </ul>
+        <br>
+    <p>Special Thanks to Wikipedia, Crossref and StackOverflow</p>
+    </div>
+
+    <link type="text/css" rel="stylesheet" href="{% static "css/about.css" %}"  media="screen,projection"/>
+
+{% endblock content %}

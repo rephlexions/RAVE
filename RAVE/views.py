@@ -44,3 +44,10 @@ class CategoryViewer(View):
         context = {'json_data': json.dumps(data), 'form': form}
 
         return render(request, self.template_name, context)
+
+
+class AboutView(View):
+    template_name = 'about.html'
+
+    def get(self, request):
+        return render(request, self.template_name)

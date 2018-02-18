@@ -1,0 +1,10 @@
+div.slider{
+    display: none;
+}
+ul{
+    list-style-type: disc;
+}
+
+div.flow-text{
+    font-size: medium;
+}

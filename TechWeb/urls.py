@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from RAVE.views import HomeView, CategoryViewer, SearchView
+from RAVE.views import HomeView, CategoryViewer, SearchView, AboutView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^view/$', CategoryViewer.as_view(), name='view'),
     url(r'^results/$', SearchView.as_view(), name='results'),
+    url(r'^about/$', AboutView.as_view(), name='about'),
 
 ]

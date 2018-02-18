@@ -1,4 +1,6 @@
 $('document').ready(function () {
+
+    // Load slideshow banner
     $('div.slider').slider({
     height: 200,
     indicators: false,
