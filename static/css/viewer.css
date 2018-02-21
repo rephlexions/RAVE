@@ -9,34 +9,6 @@ h3{
     clear: both;
 }
 
-nav{
-    margin-bottom: 1%;
-}
-#wiki-data{
-    font-size: medium;
-}
-/*Crossref Publications*/
-div.crossref-card{
-    display: none;
-    background-color: #3fc1c9;
-}
-
-
-/* Table of Contents */
-#toc-card {
-    position: fixed;
-   /* float: left;
-    right: 80%;
-    top: 14%;
-    clear: both;
-    margin-left: 5%;
-    margin-right: 6%;*/
-    font-size: 1em;
-    margin-top: 8.4%;
-    background-color: #3fc1c9;
-    overflow: hidden;
-}
-
 div.toc span.tocnumber,  span.toctext{
     color: white;
 }
@@ -45,12 +17,33 @@ div.row{
     clear: both;
 }
 
-/*Images*/
+nav{
+    margin-bottom: 1%;
+}
+/* wiki card*/
+div.card-panel{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#wiki-data{
+    font-size: medium;
+}
+/*Crossref Publications*/
+div.crossref-card{
+    display: none;
+    background-color: #008891;
+}
+
+
+/* Wiki Card Images*/
+/* Chrome, Safari, AND NOW ALSO the Edge Browser and Firefox */
+
 div.thumbinner{
     float: right;
-
     margin-left: 2%;
     margin-bottom: 2%;
+    clear: both;
 }
 img.thumbimage{
     max-width: 100%;
@@ -106,10 +99,7 @@ span.card-title{
     overflow: hidden;
 }
 
-div.card.crossref-card{
-
-}
-
+/* Wiki Images for <700px screens*/
 @media only screen and (max-width: 700px){
     div.thumbinner{
         display: block;

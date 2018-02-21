@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load staticfiles %}
+{% extends "base.html" %} {% load static %}
 
 {% block content %}
 
@@ -14,8 +14,10 @@
             <div class="col s12 m6 l4">
                 <div class="card hoverable medium">
                     <div class="card-image">
-                        <img src="{% static "images/Van_Gogh_-_Starry_Night.jpg" %}">
+                        <a href="/view/?page=Post-Impressionism">
+                            <img src="{% static "images/Van_Gogh_-_Starry_Night.jpg" %}">
                         <span class="card-title">Post-Impressionism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                         <p>
@@ -30,8 +32,10 @@
             <div class="col s12 m6 l4">
                 <div class="card hoverable medium">
                     <div class="card-image">
-                        <img src="{% static "images/Jean-François_Millet-Gleaners_resize.jpg" %}">
-                        <span class="card-title">Realism</span>
+                        <a href="/view/?page=Realism (art movement)">
+                            <img src="{% static "images/Jean-François_Millet-Gleaners_resize.jpg" %}">
+                            <span class="card-title">Realism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                         <p>Realism was an artistic movement that began in France in the 1850s, after the 1848 Revolution.</p>
@@ -44,8 +48,10 @@
             <div class="col s12 m6 l4">
                 <div class="card hoverable medium">
                     <div class="card-image" >
-                        <img src="{% static "images/Impressionism-Claude_Monet-soleil-levant.jpg" %}">
-                        <span class="card-title">Impressionism</span>
+                        <a href="/view/?page=Impressionism">
+                            <img src="{% static "images/Impressionism-Claude_Monet-soleil-levant.jpg" %}">
+                            <span class="card-title">Impressionism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                         <p>Impressionism originated with a group of Paris-based artists during the 1870s and 1880s.</p>
@@ -60,8 +66,10 @@
                 <div class="col s12 m6 l3 l4">
                     <div class="card hoverable medium">
                         <div class="card-image">
-                            <img src="{% static "images/Albert_Gleizes_Femme_aux_Phlox.jpg" %}">
-                            <span class="card-title">Cubism</span>
+                            <a href="/view/?page=Cubism">
+                                <img src="{% static "images/Albert_Gleizes_Femme_aux_Phlox.jpg" %}">
+                                <span class="card-title">Cubism</span>
+                            </a>
                         </div>
                         <div class="card-content">
                             <p>Cubism has been considered to be among the most influential art movements of the 20th century.</p>
@@ -74,8 +82,10 @@
                 <div class="col s12 m6 l3 l4">
                     <div class="card hoverable medium">
                         <div class="card-image">
-                            <img src="{% static "images/Salvadro-Dali-Sleep-via-Bureau-de-Estilo-Renata-Abranchs.jpg" %}">
-                            <span class="card-title">Surrealism</span>
+                            <a href="/view/?page=Surrealism">
+                                <img src="{% static "images/Salvadro-Dali-Sleep-via-Bureau-de-Estilo-Renata-Abranchs.jpg" %}">
+                                <span class="card-title">Surrealism</span>
+                            </a>
                         </div>
                         <div class="card-content">
                             <p>Surrealism is a cultural movement that began in the early 1920s, and is best known for its visual artworks and writings.</p>
@@ -88,8 +98,10 @@
                 <div class="col s12 m6 l3 l4">
                     <div class="card hoverable medium">
                         <div class="card-image">
-                            <img src="{% static "images/Abstract-Expressionism-Fluid-Painting-Acrylic-on-Canvas.jpg" %}">
-                            <span class="card-title">Abstract Expressionism</span>
+                            <a href="/view/?page=Abstract_expressionism">
+                                <img src="{% static "images/Abstract-Expressionism-Fluid-Painting-Acrylic-on-Canvas.jpg" %}">
+                                <span class="card-title">Abstract Expressionism</span>
+                            </a>
                         </div>
                         <div class="card-content">
                             <p>Abstract expressionism is a post–World War II art movement in American painting, developed in New York in the 1940s</p>
@@ -104,8 +116,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Roy-Lichtenstein-M-Maybe-1965-detail-865x577.jpg" %}">
-                      <span class="card-title">Pop Art</span>
+                        <a href="/view/?page=Pop art">
+                          <img src="{% static "images/Roy-Lichtenstein-M-Maybe-1965-detail-865x577.jpg" %}">
+                          <span class="card-title">Pop Art</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>Pop art is an art movement that emerged in Britain and the United States during the mid- to late-1950s.</p>
@@ -118,8 +132,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Janbrueghelark.jpg" %}">
-                      <span class="card-title">Baroque</span>
+                        <a href="/view/?page=Baroque">
+                            <img src="{% static "images/Janbrueghelark.jpg" %}">
+                          <span class="card-title">Baroque</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>
@@ -135,8 +151,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Battle_of_Lights.jpg" %}">
-                      <span class="card-title">Futurism</span>
+                        <a href="/view/?page=Futurism">
+                            <img src="{% static "images/Battle_of_Lights.jpg" %}">
+                          <span class="card-title">Futurism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>Futurism was an artistic and social movement that originated
@@ -152,8 +170,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Kazimir_Malevich,_1915,_Black_Suprematic_Square_Tretyakov_Gallery,_Moscow.jpg" %}">
-                      <span class="card-title">Minimalism</span>
+                        <a href="/view/?page=Minimalism">
+                            <img src="{% static "images/Kazimir_Malevich,_1915,_Black_Suprematic_Square_Tretyakov_Gallery,_Moscow.jpg" %}">
+                          <span class="card-title">Minimalism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>
@@ -169,8 +189,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Mengs,_Urteil_des_Paris.jpg"%}">
-                      <span class="card-title">Neoclassicism</span>
+                        <a href="/view/?page=Neoclassicism">
+                            <img src="{% static "images/Mengs,_Urteil_des_Paris.jpg"%}">
+                          <span class="card-title">Neoclassicism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>Neoclassicism draws inspiration from the
@@ -184,8 +206,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Eugène_Delacroix_-_La_liberté_guidant_le_peuple.jpg" %}">
-                      <span class="card-title">Romanticism</span>
+                        <a href="/view/?page=Romanticism">
+                            <img src="{% static "images/Eugène_Delacroix_-_La_liberté_guidant_le_peuple.jpg" %}">
+                          <span class="card-title">Romanticism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>
@@ -203,8 +227,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Jove_decadent.jpg" %}">
-                      <span class="card-title">Decadent movement</span>
+                        <a href="/view/?page=Decadent movement">
+                            <img src="{% static "images/Jove_decadent.jpg" %}">
+                          <span class="card-title">Decadent movement</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>
@@ -220,8 +246,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/John_Baeder.jpg" %}">
-                      <span class="card-title">Photorealism</span>
+                        <a href="/view/?page=Photorealism">
+                            <img src="{% static "images/John_Baeder.jpg" %}">
+                          <span class="card-title">Photorealism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>
@@ -236,8 +264,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Tie-dye.png" %}">
-                      <span class="card-title">Psychedelic art</span>
+                        <a href="/view/?page=Psychedelic art">
+                            <img src="{% static "images/Tie-dye.png" %}">
+                            <span class="card-title">Psychedelic art</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>
@@ -255,8 +285,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Lenin_attempt.jpg" %}">
-                      <span class="card-title">Soviet art</span>
+                        <a href="/view/?page=Soviet art">
+                            <img src="{% static "images/Lenin_attempt.jpg" %}">
+                            <span class="card-title">Soviet art</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>Soviet art is the visual art that was produced in the Soviet Union.</p>
@@ -269,8 +301,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/TheKnightAtTheCrossroads.jpg"%}">
-                      <span class="card-title">Symbolism</span>
+                        <a href="/view/?page=Symbolism (arts)">
+                            <img src="{% static "images/TheKnightAtTheCrossroads.jpg"%}">
+                          <span class="card-title">Symbolism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>Symbolism was a late nineteenth-century art movement of French, Russian and Belgian origin
@@ -284,8 +318,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg" %}">
-                      <span class="card-title">Art Nouveau</span>
+                        <a href="/view/?page=Art Nouveau">
+                            <img src="{% static "images/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg" %}">
+                          <span class="card-title">Art Nouveau</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>Art Nouveau is an international style of art, architecture and applied art,
@@ -301,8 +337,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/Christ_amongst_the_Doctors,_oil_on_canvas_painting_by_Orazio_Borgianni.jpg" %}">
-                      <span class="card-title">Caravaggisti</span>
+                        <a href="/view/?page=Caravaggisti">
+                            <img src="{% static "images/Christ_amongst_the_Doctors,_oil_on_canvas_painting_by_Orazio_Borgianni.jpg" %}">
+                          <span class="card-title">Caravaggisti</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>The Caravaggisti were stylistic followers of the 16th-century
@@ -316,8 +354,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/EyeCandy3NEW.jpg" %}">
-                      <span class="card-title">Geometric abstraction</span>
+                        <a href="/view/?page=Geometric abstraction">
+                            <img src="{% static "images/EyeCandy3NEW.jpg" %}">
+                          <span class="card-title">Geometric abstraction</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>Geometric abstraction is a form of abstract art based on the use of geometric forms sometimes</p>
@@ -330,8 +370,10 @@
                 <div class="col s12 m6 l3 l4">
                   <div class="card medium">
                     <div class="card-image">
-                      <img src="{% static "images/drexciya.jpg" %}">
-                      <span class="card-title">Afrofuturism</span>
+                        <a href="/view/?page=Afrofuturism">
+                            <img src="{% static "images/drexciya.jpg" %}">
+                          <span class="card-title">Afrofuturism</span>
+                        </a>
                     </div>
                     <div class="card-content">
                       <p>Afrofuturism is a cultural aesthetic that combines elements of science fiction,

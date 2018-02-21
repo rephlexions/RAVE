@@ -33,10 +33,18 @@ div.slider{
     margin-bottom: 10%;
     margin-top: 5%;
     clear: bottom;
+
 }
 
 #id_search{
     background-color: white;
+    border-radius: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#autocomplete-input{
+    color: white;
 }
 
 a#load{

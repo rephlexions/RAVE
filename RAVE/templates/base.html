@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
 
 <html lang="en">
     <head>
@@ -9,7 +9,6 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="{% static "css/materialize.min.css" %}"  media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="{% static "css/rave.css" %}"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="{% static "css/base.css" %}"  media="screen,projection"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -24,7 +23,7 @@
     <body>
     <div class="row">
         <nav>
-            <div class=" container nav-wrapper">
+            <div class="container nav-wrapper">
                 <div class="row">
                     <div class="col s6 pull-s1 m1 l1">
                         <a href="/" class="brand-logo">
@@ -32,14 +31,20 @@
                         </a>
                     </div>
                     <div class="col s6 m4 offset-m6 l4 offset-l6">
-                        <form class="input-field" action="/results/" method="GET" id="navbar-form">
-                            {% csrf_token %}
-                            {{ form }}
-                        </form>
+                          <form id="navbar-form" action="/results/" method="GET">
+                            <div class="input-field">
+                              {% csrf_token %}
+                                {{ form }}
+                              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                              <i class="material-icons">close</i>
+                            </div>
+                          </form>
                     </div>
-                    <div class="col m1 l1 hide-on-small-and-down">
+                    <div class="col m1 hide-on-small-and-down">
                         <ul id="nav-mobile" class="right">
-                            <li><a href="about/">About</a></li>
+                            <li>
+                                <a href="about/"><i class="material-icons">info_outline</i>About</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -68,19 +73,21 @@
             </li>
         </ul>
     </div>
+
     {% block content %}
 
     {% endblock content %}
+
     <br>
     <footer class="page-footer">
     <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        <h5 class="white-text">Resource Visualizer</h5>
+        <p class="grey-text text-lighten-4"></p>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Me Section</h5>
+        <h5 class="white-text">Contact Me</h5>
         <ul>
           <li>
               <a class="grey-text text-lighten-3" href="mailto:ovidiu.cara@studio.unibo.it">
@@ -99,7 +106,7 @@
     <div class="footer-copyright">
     <div class="container">
     © 2018 Copyright Ovidiu Cara
-    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    <a class="grey-text text-lighten-4 right" href="/about/">About</a>
     </div>
     </div>
     </footer>

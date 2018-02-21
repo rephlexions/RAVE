@@ -25,7 +25,7 @@ SECRET_KEY = 'bt4alnmzik7)w120pmjxf7b83c^1z@rg9ril!vwihc0w-s1jrr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -52,10 +52,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'TechWeb.urls'
 
+# os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -115,9 +116,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATICFILES_DIRS = [STATIC_DIR, ]
 
+STATIC_ROOT = '/home/web/ovidiu.cara/data/'
 STATIC_URL = '/static/'

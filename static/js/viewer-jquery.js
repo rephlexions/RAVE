@@ -8,7 +8,6 @@ $('document').ready(function () {
     $('a[title]').each(function(){
         this.href = this.href.replace("/wiki/", "/view/?page=");
     });
-
     $('div[aria-labelledby]').each(function () {
         $(this).remove();
     });
@@ -55,7 +54,6 @@ $('document').ready(function () {
         $(this).removeAttr('height');
         $(this).addClass('responsive-img');
     });
-
     //Set size of image container based in the size of image
     $('img.thumbimage').on('load', function () {
         var width = this.clientWidth;
@@ -63,19 +61,26 @@ $('document').ready(function () {
         $(this).closest('div.thumbinner').width(width).height(height + $(this).siblings('div.thumbcaption').height);
 
     });
-
     // Add shadow effect to the image container
     $('div.thumbinner').each(function () {
         $(this).removeAttr('style');
         $(this).addClass('z-depth-1');
     });
+    /*
+    $('div.thumb.tright').each(function () {
+        if($(this).next() !== '<p>'){
+            console.log($(this).next());
+            $(this).find('div.thumbinner').css('float', 'none');
+            $(this).find('div.thumbinner').addClass('center-align');
+        }
+    });
+    */
 
     //Get bigger images
     $('img[src]').each(function () {
         var patt = new RegExp('(\\/\\d\\w+-)');
         this.src = this.src.replace(patt, '/500px-');
     });
-
     $('a.image').each(function () {
         $(this).removeAttr('href');
     });
@@ -86,6 +91,11 @@ $('document').ready(function () {
     $('.tabs').tabs();
 
     // Fill the Crossref tab with data
+    handleCrossrefData(parsed_data);
+
+});
+
+function handleCrossrefData(parsed_data) {
     if(parsed_data['crossref'] !== null){
         $('li.disabled').removeClass('disabled');
         var crossref_data = JSON.parse(parsed_data['crossref']);
@@ -116,7 +126,7 @@ $('document').ready(function () {
             $(this).show();
         });
     }
-});
+}
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),

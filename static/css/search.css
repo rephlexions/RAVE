@@ -1,3 +1,8 @@
+h4{
+    width: 100%;
+    text-align: center;
+}
+
 span.card-title {
     background-color: rgba(0, 0, 0, .3);
     width: 359px;
@@ -5,8 +10,12 @@ span.card-title {
 
 div.card-content p{
     text-align: left;
-    font-size: small;
+    max-height: inherit;
     text-overflow: ellipsis;
+}
+/* TODO Rework this */
+.card.small .card-image + .card-content, .card.medium .card-image + .card-content, .card.large .card-image + .card-content {
+    max-height: 23%;
 }
 
 div.card-image{
@@ -14,6 +23,7 @@ div.card-image{
     margin: auto;
     height: 332px;
 }
+
 div.card-image img{
     height: 100%;
 }
@@ -28,10 +38,18 @@ div.slider{
 }
 
 #results-form{
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     margin-top: 5%;
+    border-radius: 5px;
 }
 
 #id_search{
     background-color: white;
+    border-radius: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#autocomplete-input{
+    color: white;
 }
