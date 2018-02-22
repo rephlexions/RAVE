@@ -27,7 +27,6 @@ $('document').ready(function () {
     $('table.vertical-navbox').remove();
     $('table.wikitable').remove();
     $('div.navigation-not-searchable').remove();
-
     $('div.reflist').prev('h2').remove();
     $('div.reflist').remove();
     $('div.refbegin').prev('h2').remove();

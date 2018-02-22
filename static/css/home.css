@@ -41,10 +41,14 @@ div.slider{
     border-radius: 5px;
     padding-left: 2%;
     padding-right: 2%;
+    max-width: 96%;
 }
 
 #autocomplete-input{
     color: white;
+    position: relative;
+    right: 15%;
+    bottom: 15%;
 }
 
 a#load{

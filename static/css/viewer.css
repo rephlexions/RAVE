@@ -9,10 +9,6 @@ h3{
     clear: both;
 }
 
-div.toc span.tocnumber,  span.toctext{
-    color: white;
-}
-
 div.row{
     clear: both;
 }
@@ -37,20 +33,18 @@ div.crossref-card{
 
 
 /* Wiki Card Images*/
-/* Chrome, Safari, AND NOW ALSO the Edge Browser and Firefox */
-
 div.thumbinner{
     float: right;
     margin-left: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     clear: both;
 }
+
 img.thumbimage{
     max-width: 100%;
     max-height: 100%;
     height: auto;
     float: right;
-
 }
 
 div.thumbcaption{
@@ -59,6 +53,7 @@ div.thumbcaption{
     width: 100%;
     padding: 2%;
 }
+
 /*Hide info tables*/
 table.infobox{
     display: none;

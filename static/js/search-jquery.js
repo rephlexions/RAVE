@@ -45,23 +45,3 @@ var getUrlParameter = function getUrlParameter(sParam) {
             }
         }
     };
-/*
-        $("span.card-title").each(function (i, obj) {
-            $(this).text(titles[i]);
-        });
-
-        $("div.card-content").children('p').each(function (i, obj) {
-           $(this).text(intro_text[i]);
-        });
-        $("div.card-action").children('a').each(function (i, obj) {
-           $(this).attr("href", "/view/?page=" + titles[i]);
-        });
-
-        var page_ids = parsed_data['images']['query']['pageids'];
-        $("div.card-image").children("img").each(function (i, obj) {
-            if(parsed_data['images']['query']['pages'][page_ids[i]].hasOwnProperty('thumbnail')){
-               $(this).attr("src", parsed_data['images']['query']['pages'][page_ids[i]]['thumbnail']['source']);
-               //console.log(parsed_data['images']['query']['pages'][page_ids[i]]['thumbnail']['source']);
-            }
-
-            });*/
