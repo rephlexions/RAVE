@@ -1,8 +1,8 @@
 $('document').ready(function () {
 
-    var parsed_data = JSON.parse(json_page_data);
-    var wiki_data = parsed_data['wiki'];
-    $("#wiki-data").html(wiki_data).addClass("flow-text");
+    var parsedData = JSON.parse(json_page_data);
+    var wikiData = parsedData['wiki'];
+    $("#wiki-data").html(wikiData).addClass("flow-text");
 
     // Do not redirect to Wikipedia
     $('a[title]').each(function(){
@@ -44,9 +44,8 @@ $('document').ready(function () {
     $('#External_links').closest('h2').siblings('ul').remove();
     $('#External_links').closest('h2').remove();
 
-    //Images
+    // Handle Images
     $('img').each(function () {
-       // $(this).addClass('materialboxed');
         $(this).removeClass('thumbnail');
         $(this).removeAttr('srcset');
         $(this).removeAttr('width');
@@ -65,39 +64,28 @@ $('document').ready(function () {
         $(this).removeAttr('style');
         $(this).addClass('z-depth-1');
     });
-    /*
-    $('div.thumb.tright').each(function () {
-        if($(this).next() !== '<p>'){
-            console.log($(this).next());
-            $(this).find('div.thumbinner').css('float', 'none');
-            $(this).find('div.thumbinner').addClass('center-align');
-        }
-    });
-    */
-
     //Get bigger images
     $('img[src]').each(function () {
         var patt = new RegExp('(\\/\\d\\w+-)');
         this.src = this.src.replace(patt, '/500px-');
     });
+
     $('a.image').each(function () {
         $(this).removeAttr('href');
     });
 
     //Initialize Materialize effects
-    $('.materialboxed').materialbox();
-    $('.collapsible').collapsible();
     $('.tabs').tabs();
 
     // Fill the Crossref tab with data
-    handleCrossrefData(parsed_data);
+    handleCrossrefData(parsedData);
 
 });
 
-function handleCrossrefData(parsed_data) {
-    if(parsed_data['crossref'] !== null){
+function handleCrossrefData(parsedData) {
+    if(parsedData['crossref'] !== null){
         $('li.disabled').removeClass('disabled');
-        var crossref_data = JSON.parse(parsed_data['crossref']);
+        var crossref_data = JSON.parse(parsedData['crossref']);
         var items = crossref_data['message']['items'];
 
         $('div.crossref-card').each(function (i){
@@ -142,14 +130,3 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
-/*
-    //Get page name
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('#');
-    for(var i = 0; i < hashes.length; i++){
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-
- */

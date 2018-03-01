@@ -13,7 +13,7 @@ div.card-content p{
     max-height: inherit;
     text-overflow: ellipsis;
 }
-/* TODO Rework this */
+
 .card.small .card-image + .card-content, .card.medium .card-image + .card-content, .card.large .card-image + .card-content {
     max-height: 23%;
 }
