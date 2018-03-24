@@ -1,15 +1,12 @@
-# RAVE
-Rave (Resource Annotator, Visualizer and Enhancer) is a complex environment in which to access and mix data from different services.
+# Resource Visualizer
+Resource Visualizer is a project done by Ovidiu Cara for the Web Technologies Course at the University of Bologna, Italy. The project allows you to view data about Art Movements retrieved from two APIs, Wikipedia and CrossRef.
+The purpose is to immerse the user in to the rich and wonderful world of Art Movements, by providing both data from Wikipedia, for a more general understanding, and scientific publications from CrossRef for a deeper and sciency comprehension.
 
-## Visualizer
-
-The basic project is the Visualizer, which allows you to view in an interesting way data retrieved from two simple APIs, Wikipedia
-and Crossref, to create flexible and comprehensible representations of complex phenomena.
-
-## Annotator
-
-The standard project is the Annotator, which allows you to add comments and annotations created by the application and the user to these views.
-
-## Enhancer
-
-The advanced project is the Enhancer, which integrates multiple external sources (e.g. API's) and creates complex visualizations, intelligently mixing information that is coherent with each other.
+## Technologies Used
+* Python
+* Django Web Framework
+* HTML & CSS
+* Javascript & JQuery
+* Materialize Framework
+* Wikipedia API
+* CrossRef API
