@@ -26,7 +26,7 @@ python-apt==0.9.3.5ubuntu2
 python-dateutil==2.6.1
 python-utils==2.2.0
 pytz==2017.2
-requests==2.18.4
+requests==2.20.0
 selenium==3.6.0
 six==1.5.2
 ufw==0.34-rc-0ubuntu2
