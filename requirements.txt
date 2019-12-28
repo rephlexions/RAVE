@@ -1,4 +1,4 @@
-Django==1.11.3
+Django==1.11.23
 PyYAML==3.12
 UNKNOWN==0.0.0
 astroid==1.5.3
