@@ -1,5 +1,5 @@
 # Wikipedia Viewer
-Wikipedia Viewer allows to searc and read articles about Art Movements. Uses Wikpedia's API to retrieve the articles and CrossRef API to retrieve related scientific papers.
+Wikipedia Viewer allows to search and read articles about Art Movements. Uses Wikpedia's API to retrieve the articles and CrossRef API to retrieve related scientific papers.
 
 ## Technologies Used
 * Python (Django Web Framework)
