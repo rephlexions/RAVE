@@ -9,4 +9,4 @@ Wikipedia Viewer allows to search and read articles about Art Movements. Uses Wi
 
 
 <img src="https://i.postimg.cc/63dSnjmr/Screen-Shot-2019-12-29-at-09-03-45-fullpage.png" 
-    height="600" style="display: block;margin-left: auto;margin-right: auto;">
+    height="700" style="display: block;margin-left: auto;margin-right: auto;">
