@@ -1,5 +1,5 @@
 Django==1.11.29
-PyYAML==5.1
+PyYAML==5.4
 UNKNOWN==0.0.0
 astroid==1.5.3
 beautifulsoup4==4.6.0
